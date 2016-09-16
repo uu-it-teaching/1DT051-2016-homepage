@@ -1,3 +1,8 @@
+.drawer .scrollable {
+    top: 204px;
+}
+
+
 li.course-name {
     font-size: 1.3em;
     font-weight: bold;
