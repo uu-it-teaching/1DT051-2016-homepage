@@ -79,3 +79,17 @@ h1, h2, h3 {
     padding-left: 3p;
     padding-right: 3px;
 }
+
+
+table.grading td, table.grading th {
+    text-align: center;
+}
+
+table.html-table td, table.html-table th {
+    border: 1px solid black;
+}
+
+table.html-table td.grading-day {
+    vertical-align: middle;
+    text-align: center;
+}

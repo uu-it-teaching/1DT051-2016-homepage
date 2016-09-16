@@ -5,7 +5,7 @@ type: index
 weight: 0
 ---
 
-På kursen [Introduktion till informationsteknologi (1DT051)](https://studentportalen.uu.se/portal/portal/uusp/student/student-course?entityId=141825) ingår momentet
+På kursen [Introduktion till informationsteknologi (1DT051)][0] ingår momentet
 problemlösning och programmering. All information om detta moment hittar du på
 dessa sidor. 
 
@@ -29,7 +29,7 @@ Den som vill förbereda sig inför uppgifterna om programmering bör:
 
 - översiktligt läsa igenom
 denna
-[bakgrund](./1DT051_2016_Bakgrund_Reläer_vakuumrör_transistorer_grindar_och_datorer.pdf) som
+[bakgrund][1] som
 tar upp hur olika tekniker såsom reläer, vakumrör och tranistorer kan användas
 för att konsturera
 digitala [grindar](https://sv.wikipedia.org/wiki/Logisk_grind) samt hur dessa
@@ -38,7 +38,7 @@ kan användas för att konstruera datorer
 - repeterat dina kunskaper om binära och hexadecimala tal, till exempel genom
   att läsa igenom materialet från
   denna
-  [föreläsning](1DT051_2016_Föreläsning_Binära_och_hexadecimala_tal_två_komplement.pdf).
+  [föreläsning][2]. 
 
 
 Det finns också väldigt mycket bra material på nätet om Python och hur man
@@ -111,5 +111,10 @@ inte båda kan visa att de förstår och kan förklara parets lösning.
 
 {{< /warning >}}
 
+[0]: https://studentportalen.uu.se/portal/portal/uusp/student/student-course?entityId=141825
+
+[1]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_programming_part_1_background.pdf 
+
+[2]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_bin_hex_numbers_lecture.pdf
 
  

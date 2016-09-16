@@ -1,4 +1,4 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://www.it.uu.se/education/course/homepage/introit/ht16/" 
 languageCode = "en-us"
 title = "1DT051/2016"
 theme = "hugo-material-docs"
@@ -47,36 +47,69 @@ googleAnalytics = ""
 
 [social]
 	twitter = ""
-	github  = "digitalcraftsman"
+	github  = "uu-it-teaching/1DT051-2016-homepage"
 
   name = "Programmering"
   url  = "programming/index"
 
+#### Part 1
 
 [[menu.main]]
   name = "Syfte och överskikt"
+  identifier = "part-1-about"
   parent = "Del 1"
   url    = "programming/part-1/"
   weight = -1 
 
 [[menu.main]]
   name = "Uppgifter"
+  identifier = "part-1-assignment"
   parent = "Del 1"
   url    = "programming/part-1/assignment/"
 
+[[menu.main]]
+  name = "Redovisning"
+  identifier = "part-1-grading"
+  parent = "Del 1"
+  weight = 10
+  url    = "programming/part-1/grading/"
+
+
+#### Part 2
 
 [[menu.main]]
-  name = "Syfte och översik"
+  name = "Syfte och översikit"
+  identifier = "part-2-about"
   parent = "Del 2"
   url    = "programming/part-2"
 
 [[menu.main]]
+  name = "Uppgifter"
+  identifier = "part-2-assignment"
+  parent = "Del 2"
+  url    = "programming/part-2/assignment/"
+
+
+#### Part 3
+
+[[menu.main]]
   name = "Syfte och översikt"
+  identifier ="part-3-about"
   parent = "Del 3"
   url    = "programming/part-3"
 
 [[menu.main]]
+  name = "Uppgifter"
+  identifier = "part-3-assignment"
+  parent = "Del 3"
+  url    = "programming/part-3/assignment/"
+
+
+#### Projekt
+
+[[menu.main]]
   name = "Syfte och översikt"
+  identifier = "project-about"
   parent = "Projekt"
   url    = "programming/project"
 
