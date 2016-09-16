@@ -1,0 +1,81 @@
+li.course-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+li.course-module {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 0em;
+}
+
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+.article h1 {
+    font-size: 3em;
+}
+
+.article h2 {
+    font-size: 2em;
+}
+
+.article ul>li:before {
+    content: none;
+    display: none;
+    float: none;
+}
+
+.article ul {
+    list-style-type: disc;
+}
+
+.article ul > li {
+    margin-left: 2em;
+}
+
+.article a {
+    color: rgb(232, 78, 64);
+    font-weight: bold;
+    border-bottom-style: none;
+}
+
+
+.palette-primary-red .article a:hover {
+    color: #ef8076;
+} 
+
+.article .warning a:hover { 
+    color: #cccc00;
+}
+
+.article .warning a {
+    color: yellow;
+}
+
+.toc span.section {
+    font-size: 2em;
+}
+
+
+
+.palette-primary-red .article code {
+    color: black;
+}
+
+.article p code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ddd;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3p;
+    padding-right: 3px;
+}

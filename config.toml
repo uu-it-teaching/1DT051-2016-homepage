@@ -1,0 +1,88 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "en-us"
+title = "1DT051/2016"
+theme = "hugo-material-docs"
+# theme = "default"
+
+metadataformat = "yaml"
+canonifyurls = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = ""
+
+[params]
+	# General information
+	author = "Karl Marklund"
+  # 	description = "A material design theme for documentations."
+	copyright = "Released under the MIT license"
+
+  course_code = "1DT051"
+  course_name = "Introduktion till informationsteknologi"
+  course_year = "2016"
+
+	# Repository
+  #	provider = "GitHub"
+  # repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
+
+	# version = "1.0.0"
+  # logo = "images/logo.png"
+	favicon = ""
+
+  ##	permalink = "#"
+
+	# Custom assets
+	custom_css = ["css/material-tweaks.css"]
+	custom_js  = []
+
+	# Syntax highlighting theme
+	highlight_css  = ""
+
+	[params.palette]
+    	primary = "red"
+    	accent  = "light-green"
+
+    [params.font]
+    	text = "Ubuntu"
+    	code = "Ubuntu Mono"
+
+
+[social]
+	twitter = ""
+	github  = "digitalcraftsman"
+
+  name = "Programmering"
+  url  = "programming/index"
+
+
+[[menu.main]]
+  name = "Syfte och överskikt"
+  parent = "Del 1"
+  url    = "programming/part-1/"
+  weight = -1 
+
+[[menu.main]]
+  name = "Uppgifter"
+  parent = "Del 1"
+  url    = "programming/part-1/assignment/"
+
+
+[[menu.main]]
+  name = "Syfte och översik"
+  parent = "Del 2"
+  url    = "programming/part-2"
+
+[[menu.main]]
+  name = "Syfte och översikt"
+  parent = "Del 3"
+  url    = "programming/part-3"
+
+[[menu.main]]
+  name = "Syfte och översikt"
+  parent = "Projekt"
+  url    = "programming/project"
+
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true
