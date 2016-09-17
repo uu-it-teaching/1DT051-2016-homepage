@@ -15,7 +15,8 @@ Syftet med detta moment är att se hur
 metoden
 [söndra och härska](https://sv.wikipedia.org/wiki/S%C3%B6ndra_och_h%C3%A4rska)
 kan användas för att lösa problem med hjälp av programmering. Du få prova på och
-lära sig grunderna inom programmering och då särskilt i det imperativa
+lära sig grunderna inom programmering och då särskilt i
+det [imperativa](https://sv.wikipedia.org/wiki/Imperativ_programmering)
 programmeringsspråket
 [Python](https://sv.wikipedia.org/wiki/Python_(programspr%C3%A5k)).
 

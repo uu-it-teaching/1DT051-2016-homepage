@@ -52,6 +52,26 @@ googleAnalytics = ""
   name = "Programmering"
   url  = "programming/index"
 
+
+
+#### Resurser
+
+[[menu.main]]
+  name = "Start"
+  weight = -11
+
+[[menu.main]]
+  name = "Syfte och översikt"
+  parent = "Start"
+  url = "./"
+
+[[menu.main]]
+  name = "Resurser"
+  parent = "Start"
+  url = "resources/"
+  weight = 2
+
+
 #### Part 1
 
 [[menu.main]]
@@ -112,7 +132,6 @@ googleAnalytics = ""
   identifier = "project-about"
   parent = "Projekt"
   url    = "programming/project/"
-
 
 [blackfriday]
 	smartypants	= true
