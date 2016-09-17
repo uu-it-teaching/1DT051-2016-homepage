@@ -81,7 +81,7 @@ googleAnalytics = ""
   name = "Syfte och översikit"
   identifier = "part-2-about"
   parent = "Del 2"
-  url    = "programming/part-2"
+  url    = "programming/part-2/"
 
 [[menu.main]]
   name = "Uppgifter"
@@ -96,7 +96,7 @@ googleAnalytics = ""
   name = "Syfte och översikt"
   identifier ="part-3-about"
   parent = "Del 3"
-  url    = "programming/part-3"
+  url    = "programming/part-3/"
 
 [[menu.main]]
   name = "Uppgifter"
@@ -111,7 +111,7 @@ googleAnalytics = ""
   name = "Syfte och översikt"
   identifier = "project-about"
   parent = "Projekt"
-  url    = "programming/project"
+  url    = "programming/project/"
 
 
 [blackfriday]
