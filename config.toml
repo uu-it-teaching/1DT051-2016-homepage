@@ -64,13 +64,19 @@ googleAnalytics = ""
   name = "Syfte och översikt"
   parent = "Start"
   url = "./"
+  weight = 1
 
 [[menu.main]]
-  name = "Resurser"
+  name = "Python i korthet"
   parent = "Start"
-  url = "resources/"
+  url = "python-i-korthet/"
   weight = 2
 
+[[menu.main]]
+  name = "Övriga resurser"
+  parent = "Start"
+  url = "resources/"
+  weight = 3
 
 #### Part 1
 

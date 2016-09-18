@@ -10,12 +10,6 @@ som används för momentet problemlösning och programmering.
 På [kursens sida i Studentportalen][sp] hittar du framsteg
 för [del 1](../programming/part-1), [del 2](../programming/part-2)
 , [del 3](../programming/part-3) och [projektet](../programming/project)  
-## Python i korthet
-
-Här hittar du en kortfattad introduktion till allt som kommer tas upp om Python
-på kursen.
-
-- [Python i korthet][pik]
 
 ## An informal introduction to python
 
@@ -67,7 +61,5 @@ kan användas för att konstruera datorer.
 [part-1-background]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_programming_part_1_background.pdf
 
 [lecture-bin-hex]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_bin_hex_numbers_lecture.pdf
-
-[pik]: https://docs.google.com/document/d/1cdTANcfguakB3uAT6qolEwXjSVG-cNk-zQ3oRlA4Mfo/pub
 
 [part-1-workshop]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_programming_part_1_workshop.pdf

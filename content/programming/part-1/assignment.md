@@ -93,4 +93,4 @@ en länk som innehåller all kod. Kopiera länken och spara den.
 
 ## Deadline 
 
-Uppgifterna skall redovisas **måndag 22/9** eller **onsdag 24/9**.
+Uppgifterna skall [redovisas](../grading) **måndag 22/9** eller **onsdag 24/9**.
