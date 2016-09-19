@@ -6,7 +6,7 @@ Python i korthet är en sammanfattning av det du kommer lära dig om
 programmeringssrpåket Python på momentet Problemlösning och programmering.
 
 - Samma eller liknande information som återfinns i Python i korthet hittar du
-även att på [slides från workshops](../resources/#slides-från-föreläsningar-och-workshops).
+även på [slides från workshops](../resources/#slides-från-föreläsningar-och-workshops).
 
 - Du kan använda Python i korthet för att förbereda dig på egen hand inför
 workshops och uppgifter eller som en uppslagsbok när du glömt eller vill
@@ -77,7 +77,7 @@ visas på raden under. Sedan skriv en ny prompt `>>> ` ut.
 
 ## Python som miniräknare
 
-Prova att skriva in `1+2` direkt efter Python-prompten `>>> ` och trycker
+Prova att skriva in `1+2` direkt efter Python-prompten `>>> ` och tryck sedan på
 **enter**. 
 
 ```python
@@ -108,7 +108,8 @@ Parenteser kan användas för att gruppera.
 
 ## ​Kommentarer 
 
-Med hjälp av tecknet `#` kan kommentarer läggas till i Python-koden, dvs text som endast är till för att läsas av människor men som Python kommer hoppa över. 
+Med hjälp av tecknet `#` kan kommentarer läggas till i Python-koden, dvs text
+som endast är till för att läsas av människor men som Python kommer ignorera.
 
 Allt efter tecknet `#` på en rad utgör en kommentar (inklusive tecknet `#` självt). 
 
@@ -141,9 +142,9 @@ Du kan dock ha ett eller flera blanktecken mellan en operand och en operator.
 ```python
 >>> 1+2       # Inga blanksteg mellan operatorn + och operanderna 1 och 1
 2
->>> 1  +2     # Blanksteg mellan operanden 2 och operatorn +
+>>> 1  +2     # Blanksteg mellan operanden 1 och operatorn +
 3
->>> 1+  2     # Blanksteg mellan operatorn + och operatorn 2
+>>> 1+  2     # Blanksteg mellan operatorn + och operanden 2
 3
 >>> 1 + 2     # Blanksteg på båda sidorna av operaton +
 3
@@ -177,168 +178,6 @@ Ett uttryck är en **kombination** av **tal**, **operatorer**,
 **grupperande symboler** (som klammer och parentes) och/eller **variabler**
 ordnade på ett meningsfullt sätt så att Python kan beräkna ett värde. I stället
 för att uttryck beräknas säger man ofta att uttryck **utvärderas** (evalueras).
-
-## Aritmetiska operatorer 
-
-| Beräkning  | Operator |   Exempel  | Resultat |
-|------------|----------|------------|-----------
-| Addition   | +        | 1 + 1      | 2        |
-| Subtraktion| - | 5 - 1 | 4 |
-| Multiplikation | * | 3.5*2 | 7|
-| Division | / | 6 / 2 | 3 |
-| Modulo (rest vid heltalsdivision) | % | 7 % 2 | 1 |
-| Exponent | ** | 2**3 | 8 | 
-
-```python
->>> 1 + 1
-2
->>> 128 - 1
-127
->>> 3*11
-33
->> 6/2
-3
->>> 7 % 2
-1
->>> 2**3
-8
->>> 2**4
-16
->>> 2**10
-1024
->>> 1+2*(6/2)
-7
-```
-
-## Operatorer för jämförelser
-
-| Jämförelse  | Operator |   Exempel  | Resultat |
-|------------|----------|------------|-----------
-| Lika med   | == | 127 == 55 | False |
-| Icke lika med | != | 127 != 55 | True |
-| Större än | > | 127 > 55 | True |
-| Mindre än | < | 127 < 55 | False |
-| Större eller lika med | >= | 127 >= 55 | True |
-| Minre eller lika med | <= | 127 <= 55 | False |
-
-Resultatet av en jämförelse, till exempel av två stycken tal är antingen sant eller falskt, dvs antingen `True` eller `False`. 
-
-### ​Lika eller inte lika med
-
-För att kontrollera om två värden är lika med varandra används operator `==` och för att kontrollera om två värden är olika `!=`. 
-
-```python
->>> x = 22   # Tilldelning
->>> y = 11   # Tilldelning
->>> x == y   # Har x samma värde som y?
-False
->>> x == x   # Har x samma värde som x?
-True
->>> x != y   # Är värdet på x inte samma som värdet på y?
-True
->>> x != x   # Är värdet på x inte samma som värdet på x?
-False
-```
-
-### Större än och mindre än
-
-Operatorerna `>`, `<`, `>=` och `>=` kan också användas för jämföra värden.
-
-```python
->>> x = 22   # Tilldelning
->>> y = 11   # Tilldelning
->>> 127 > 42 # Är 127 större än 42
-True
->>> 42 < 127 # Är 42 mindre än 127
-True
->>> 33 < 33  # Är 33 mindre än 33
-False
->>> 33 <= 33 # Är 33 minre eller lika med 33
-True
->>> 33 >= 33 # Är 33 större eller lika med 33
-True
-```
-
-### ​Kombination av jämförelser
-
-Det går att kombinera flera jämförelser. 
-
-```python
->>> x = 111
->>> 2 < x < 200
-True
->>> x = 555
->>> 2 < x < 200
-False
->>> x = 10
->>> y = 50
->>> z = 99
->>> x < y < z
-True
->>> y = 777
->>> x < y < z
-False
-```
-
-### ​Logiskt och (and)
-
-På samma sätt som i digitaltekniken kan vi kontrollera om ett antal utryck alla är `True` samtidigt med hjälp av `and`. 
-
-```python
->>> x = 22
->>> y = 11
->>> x > 10 and y < 100
-True
->>> x > 10 and y < 10
-False
->>> x > 10 and y < 100 and (x % 2 == 0)
-True
->>> x = 23
->>> x > 10 and y < 100 and (x % 2 == 0)
-False
-```
-
-Kom ihåg att `x % 2 == 0` är `True` om `x` är ett jämt tal och `False` om `x` är ett udda tal.
-
-### Logiskt eller (or)
-
-På samma sätt som i digitaltekniken kan vi kontrollera om ett eller flera av ett antal utryck är `True` med hjälp av `or`. 
-
-```python
->>> x = 22
->>> y = 11
->>> x > 100 or y < 10
-False
->>> x > 100 or y < 100
-True
-```
-
-### ​7.6​ Logiskt icke (not)
-
-På samma sätt som i digitaltekniken kan vi invertera ett sanningsvärde.
-
-```python
->>> not True
-False
->>> not False
-True
->>> x = 22
->>> not x > 100
-True
-```
-
-### ​7.7​ Godtyckliga logiska uttryck
-
-Det går att konstruera godtyckliga logiska uttryck genom att kombinera vanliga jämförelser med `and`,  `or` och `not`.
-
-```python
->>> x = 22
->>> y = 11
->>> (2 < x < 100) and ( (y > 100) or (y % 2 == 1) )
-True
->>> (2 < x < 100) and ( (y > 100) or not (y % 2 == 1) )
-False
-```
 
 ## Datatyp
 
@@ -469,6 +308,222 @@ värde av typen bool kan vara `True` eller `False`.
 
 Ordet bool kommer ur Boolesk algebra, som namngivits efter matematikern [George Boole](https://sv.wikipedia.org/wiki/George_Boole).
 
+## Aritmetiska operatorer 
+
+| Beräkning  | Operator |   Exempel  | Resultat |
+|------------|----------|------------|-----------
+| Addition   | `+`        | `1 + 1`      | `2`        |
+| Subtraktion| `-` | `5 - 1` | `4` |
+| Multiplikation | `*` | `3.5*2` | `7`|
+| Division | `/` | `6 / 2` | `3` |
+| Modulo (rest vid heltalsdivision) | `%` | `7 % 2` | `1` |
+| Exponent | `**` | `2**3` | `8` | 
+
+Nedan följer några exempel på aritmetiska uttryck. 
+
+```python
+>>> 1 + 1
+2
+>>> 128 - 1
+127
+>>> 3*11
+33
+>> 6/2
+3
+>>> 7 % 2
+1
+>>> 2**3
+8
+>>> 2**4
+16
+>>> 2**10
+1024
+>>> 1+2*(6/2)
+7
+```
+
+## Operatorer för jämförelser
+
+| Jämförelse  | Operator |   Exempel  | Resultat |
+|------------|----------|------------|-----------
+| Lika med   | `==` | `127 == 55` | `False` |
+| Icke lika med | `!=` | `127 != 55` | `True` |
+| Större än | `>` | `127 > 55` | `True` |
+| Mindre än | `<` | `127 < 55` | `False` |
+| Större eller lika med | `>=` | `127 >= 55` | `True` |
+| Minre eller lika med | `<=` | `127 <= 55` | `False` |
+
+Resultatet av en jämförelse, till exempel av två stycken tal är antingen sant eller falskt, dvs antingen `True` eller `False`. 
+
+### ​Lika eller inte lika med
+
+För att kontrollera om två värden är lika med varandra används operator `==` och för att kontrollera om två värden är olika `!=`. 
+
+```python
+>>> x = 22   # Tilldelning
+>>> y = 11   # Tilldelning
+>>> x == y   # Har x samma värde som y?
+False
+>>> x == x   # Har x samma värde som x?
+True
+>>> x != y   # Är värdet på x inte samma som värdet på y?
+True
+>>> x != x   # Är värdet på x inte samma som värdet på x?
+False
+```
+
+### Större än och mindre än
+
+Operatorerna `>`, `<`, `>=` och `>=` kan också användas för att jämföra värden.
+
+```python
+>>> x = 22   # Tilldelning
+>>> y = 11   # Tilldelning
+>>> 127 > 42 # Är 127 större än 42
+True
+>>> 42 < 127 # Är 42 mindre än 127
+True
+>>> 33 < 33  # Är 33 mindre än 33
+False
+>>> 33 <= 33 # Är 33 minre eller lika med 33
+True
+>>> 33 >= 33 # Är 33 större eller lika med 33
+True
+```
+
+### ​Kombination av jämförelser
+
+Det går att kombinera flera jämförelser. 
+
+```python
+>>> x = 111
+>>> 2 < x < 200
+True
+>>> x = 555
+>>> 2 < x < 200
+False
+>>> x = 10
+>>> y = 50
+>>> z = 99
+>>> x < y < z
+True
+>>> y = 777
+>>> x < y < z
+False
+```
+
+## Logiska operatorer
+
+Logiska operatorer tar en eller två operander av typen `bool` och beräknar ett
+resultat av typen `bool`.
+
+I exemplen nedan antas att `a = 10` och `b = 100`.
+
+| Operator |   Beskrivning | Exempel  | Resultat |
+|------------|----------|------------|-----------
+| `and`  | Logiskt och  | `a < 100 and b > 500` | `False` |
+| `or`   | Logiskt eller | `a < 100 or b > 500` | `True`  |
+| `not`  | Logiskt icke | `not a < 100` | `False` |
+
+
+### ​Logiskt och (and)
+
+På samma sätt som i digitaltekniken kan vi kontrollera om ett antal utryck alla
+är `True` samtidigt med hjälp av operatorn `and`. 
+
+```python
+>>> True and True
+True
+>>> True and False
+False
+>>> False and True
+False
+>>> False and False
+False
+```
+
+Operanderna till operatorn `and` kan i sig själva vara uttryck som resulterar i
+`True` eller `False`.
+
+```python
+>>> x = 22
+>>> y = 11
+>>> x > 10 and y < 100
+True
+>>> x > 10 and y < 10
+False
+>>> x > 10 and y < 100 and (x % 2 == 0)
+True
+>>> x = 23
+>>> x > 10 and y < 100 and (x % 2 == 0)
+False
+```
+
+Kom ihåg att `x % 2 == 0` är `True` om `x` är ett jämt tal och `False` om `x` är ett udda tal.
+
+### Logiskt eller (or)
+
+På samma sätt som i digitaltekniken kan vi kontrollera om ett eller flera av ett
+antal utryck är `True` med hjälp av operatorn `or`.
+
+```python
+>>> True or True
+True
+>>> True or False
+True
+>>> False or True
+True
+>>> False or False
+False
+```
+
+Operanderna till operatorn `or` kan i sig själva vara uttryck som resulterar i
+`True` eller `False`.
+
+```python
+>>> x = 22
+>>> y = 11
+>>> x > 100 or y < 10
+False
+>>> x > 100 or y < 100
+True
+```
+
+### ​7.6​ Logiskt icke (not)
+
+På samma sätt som i digitaltekniken kan vi invertera ett sanningsvärde.
+
+```python
+>>> not True
+False
+>>> not False
+True
+´´´
+
+Operanden till operatorn `not` kan i sig själv vara ett uttryck som resulterar i
+`True` eller `False`.
+
+```python
+>>> x = 22
+>>> x > 100
+False
+>>> not x > 100
+True
+```
+
+### ​7.7​ Godtyckliga logiska uttryck
+
+Det går att konstruera godtyckliga logiska uttryck genom att kombinera vanliga jämförelser med `and`,  `or` och `not`.
+
+```python
+>>> x = 22
+>>> y = 11
+>>> (2 < x < 100) and ( (y > 100) or (y % 2 == 1) )
+True
+>>> (2 < x < 100) and ( (y > 100) or not (y % 2 == 1) )
+False
+```
+
 ## ​Allmänt om funktioner
 
 En funktion löser ett väl avgränsat problem och gör det möjligt att dela in ett problem i mindre delar som sedan kan sättas samman till en större helhet. 
@@ -576,7 +631,9 @@ funktionen skall vara, i detta fall resultatet av uttrycket `2*n`.
 
 ## Anrop av funktion
 
-För att anropa en funktion skriver vi namnet på funktionen följt av argument till funktionen inom parenteser. 
+För att anropa en funktion skriver vi namnet på funktionen följt av argument
+till funktionen inom parenteser. Värdet av funktionsanropet blir det värde som
+funktionen returnerar.
 
 ```python
 >>> double(7)

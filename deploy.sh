@@ -3,7 +3,7 @@
 rm -rf public
 
 USER=kamar535
-SERVER=hamberg.it.uu.se
+SERVER=brakved.it.uu.se
 REMOTE_PATH=/it/www/htdocs/it/edu/course/homepage/introit/ht16
 TIME_STAMP=`date +date_%Y-%m-%d_time_%H_%M_%S`
 
