@@ -7,7 +7,7 @@ title: Del 1 - Uppgifter
 Du skall skriva ett antal funktioner
 i [Python Tutor](http://www.pythontutor.com/live.html#mode=edit). 
 
-{{< warning title="Spara ditt arbte" >}}
+{{< warning title="Spara ditt arbete" >}}
 
 Kom ihåg att [spara koden](#spara-din-kod) i en textfil ibland så du inte förlorar den
 kod du skrivit, till exempel genom att av misstag ladda om sidan, eller
@@ -53,7 +53,7 @@ det största av talen.
 - om funktionen anropas med talet 3 och 3 så returneras talet 3.
 
 
-##max3()
+## max3()
 
 Skriv en funktion med namn `max3()` som tar tre tal som argument och returnerar
 det största av de tre talen.
@@ -91,6 +91,3 @@ en länk som innehåller all kod. Kopiera länken och spara den.
 5. Kontrollera att Python Tutor startar med all din sparade kod.
 6. Spara länken så att du under redovisnignen kan öppna din kod i Python Tutor. 
 
-## Deadline 
-
-Uppgifterna skall [redovisas](../grading) **måndag 22/9** eller **onsdag 24/9**.

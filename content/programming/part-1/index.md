@@ -67,7 +67,7 @@ man programmerar i Python, t.ex.:
 
 ## Workshop ##
 
-Under en workshop (17/9 - 21/9) kommer ni att bekanta er med Python och [Pyton Tutor](http://www.pythontutor.com/). 
+Under en workshop kommer ni att bekanta er med Python och [Pyton Tutor](http://www.pythontutor.com/). 
 
 - [Material][3] (slides) som tas upp under denna workshop.
 

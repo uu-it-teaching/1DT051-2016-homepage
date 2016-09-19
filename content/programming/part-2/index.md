@@ -45,7 +45,7 @@ definera ett antal högre ordningens funktioner, bland annat **filter** och **ma
 
 ## Workshop
 
-Under en 2x45 minuters frivillig men starkt rekommenderad workshop (22/9 - 23/9)
+Under en 2x45 minuters frivillig men starkt rekommenderad workshop 
 går vi igenom:
 
 - Tupler.

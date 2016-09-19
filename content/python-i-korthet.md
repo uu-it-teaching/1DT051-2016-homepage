@@ -83,10 +83,11 @@ Prova att skriva in `1+2` direkt efter Python-prompten `>>> ` och tryck sedan p�
 ```python
 >>> 1+2
 3
+>>>
 ```
 
 Notera att resultatet av beräkningen `1+3` skrivs ut på en egen rad och
-slutligen att en ny Python-prompt skrivs ut på en egen rad.  
+slutligen att en ny Python-prompt `>>> ` skrivs ut på en egen rad.  
 
 Prova att skriva in fler beräkningar.
 
@@ -170,6 +171,23 @@ beräkningar.
 128
 >>> 2*a
 254
+```
+
+För att ta bort en variabel används `del` (delete).
+
+```python
+>>> a = 10
+>>> b = 100
+>>> a + b
+110
+>>> del b
+>>> a
+10
+>>> b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'b' is not defined
+>>>
 ```
 
 ## Uttryck
@@ -524,6 +542,28 @@ True
 False
 ```
 
+## Utskrift med print
+
+I Pythontolken skrivs resultatet av ett uttryck automatiskt ut på nästa rad. 
+
+```python
+>>> 124 + 3 # Aritmetsikt uttryck
+127
+```
+
+I exemplet ovan beräknas värdet av det aritmetsika uttrycket `124 + 3`.
+Resultatet `127` skrivs sedan automatiskt ut på nästa rad och slutligen skrivs
+en ny Python-prompt `>>> ` ut.
+
+Om vi vill vara explicita kan vi använda `print` för att tvinga fram en
+utskrift. 
+
+```python
+>>> print 124 + 3
+127
+```
+
+
 ## ​Allmänt om funktioner
 
 En funktion löser ett väl avgränsat problem och gör det möjligt att dela in ett problem i mindre delar som sedan kan sättas samman till en större helhet. 
@@ -667,25 +707,33 @@ double(double(3))
 
 För funktioner som inte returnerar något
 värde är yftet istället att orsaka någon sidoeffekt, till exempel skriva ut
-något på skärmen eller ändra på något av argumentet.
+något på skärmen men `print` eller ändra på något av argumentet.
 
 ```python
->>> def dont_return(x):
-...     print "x = " + str(x)
-... 
->>> dont_return(127)
-x = 127
->>> def side_effect(l, e):
+>>> def side_effect():
+...     print "I'm printing!"
+...
+>>> side_effect()
+I'm printing!
+>>>
+```
+
+I exemplet ovan returnerar funktionen `side_effect_a` inte något värde, istället
+skriver funktionen ut till skärmen. 
+
+
+```python
+>>> def side_effect_b(l, e):
 ...     l.append(e)
 ... 
->>> l = [1, 2, 3]         ## Innan funktionsanrop.
->>> side_effect(l, 999)
->>> l                     ## Efter funktionsanrop.
+>>> l = [1, 2, 3]         # Innan funktionsanrop.
+>>> side_effect_b(l, 999)
+>>> l                     # Efter funktionsanrop.
 [1, 2, 3, 999]
 ```
 
-I det sista exemplet ovan utgörs det första argumentet till funktionen
-**side_effect()** av en lista. Funktionen returnerar inte något men har trots
+I exemplet ovan utgörs det första argumentet till funktionen
+`side_effect_b()`` av en lista. Funktionen returnerar inte något men har trots
 detta ändrat på listan.
 
 ## Returnera True eller False
@@ -734,20 +782,21 @@ False
 I Python har inte alla uttryck något värde. 
 
 ```python
->>> 2*3              ## Har värde. 
+>>> 2*3            # Har värde och detta värde skrivs ut på nästa rad. 
 6
->>> l = [1,2]        
->>> l[0] = 999       ## Saknar värde. 
+>>> x = 77         # Resultatet av denna tilldelning saknar värde och inget
+                   # skrivs ut på nästa rad.
+>>>
 ```
 
 Vad händer om vi försöker returnera ett uttryck som saknar värde?
 
 ```
 >>> def error(l):
-...     return l[0] = 999
+...     return x = 999
   File "<stdin>", line 2
-    return l[0] = 999
-                ^
+    return x = 999
+             ^
 SyntaxError: invalid syntax
 ```
 
@@ -882,15 +931,43 @@ Start och stop kan i sin tur vara uttryck.
 
 ### Slingor över alla element i en lista
 
-För att konstruera slingor över listor i Python används konstruktionen `for x in list`. 
+För att konstruera slingor över listor i Python används konstruktionen `for x in xs`. 
 
 ```python
->>> for x in [1,2,3]: 
-...     print x       ## För varje varv i slingan antar x ett värde ur listan.
+>>> xs = [1,2,3]      # Listan xs
+for x in xs:          # Slinga över alla element i listan xs
+...     print x       # För varje varv i slingan tilldelas x ett värde ur listan.
 ... 
 1
 2
 3
+```
+
+Variabelnamnen `x` och `xs` kan bytas ut mot godtyckliga variabelnamn som bättre
+passar sammanhanget. 
+
+```python
+>>> xs = [1,2,3]
+>>> names = ["bosse", "greta", "nisse"]
+>>> for name in names:
+...     print "Hej " + name
+...
+Hej bosse
+Hej greta
+Hej nisse
+>>>
+```
+
+Listan behöver inte lagras i en variabel utan kan anges direkt. 
+
+```python
+>>> for n in [1,2,3,4]:
+...     print 2*n
+...
+2
+4
+6
+8
 ```
 
 ## ​Strängar och tecken
