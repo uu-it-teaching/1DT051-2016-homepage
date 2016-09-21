@@ -15,7 +15,7 @@ programmeringsspråket
 De begrepp vi kommer studera under denna uppgift är:
 
 - Aritmetiska operationer (+, -, *, /, modulo).
-- Jämförelser (<, >, ==, >=, >=).
+- Jämförelser (<, >, ==, >=, <=).
 - Logiska operationer (and, or, not).
 - Variabler.
 - Begreppet funktion. Vad menas med en funktion? Hur defineras en funktion? Hur

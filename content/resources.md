@@ -5,7 +5,7 @@ title: "Resurser"
 På denna sida hittar du en samling med länkar till material och andra resurser
 som används för momentet problemlösning och programmering.
 
-## Studentportalen 
+## Framsteg i Studentportalen 
 
 På [kursens sida i Studentportalen][sp] hittar du framsteg
 för [del 1](../programming/part-1), [del 2](../programming/part-2)
@@ -24,6 +24,13 @@ På [Codecademy](https://www.codecademy.com/) finns gratis och interaktiva kurse
 i programmering i olika språk, bland annat Python.
 
 - [Codecademy - Python](https://www.codecademy.com/learn/python)
+
+## Learn Python the hard way
+
+En gratis bok på nätet med många övningsexempel. Om du köper boken får du även
+tillgång till flera timmar med video-material. 
+
+- [Learn Python the hard way](https://learnpythonthehardway.org/book/).
 
 ## Python Tutor
 

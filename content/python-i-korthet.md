@@ -326,478 +326,65 @@ värde av typen bool kan vara `True` eller `False`.
 
 Ordet bool kommer ur Boolesk algebra, som namngivits efter matematikern [George Boole](https://sv.wikipedia.org/wiki/George_Boole).
 
-## Aritmetiska operatorer 
+## Tupler
 
-| Beräkning  | Operator |   Exempel  | Resultat |
-|------------|----------|------------|-----------
-| Addition   | `+`        | `1 + 1`      | `2`        |
-| Subtraktion| `-` | `5 - 1` | `4` |
-| Multiplikation | `*` | `3.5*2` | `7`|
-| Division | `/` | `6 / 2` | `3` |
-| Modulo (rest vid heltalsdivision) | `%` | `7 % 2` | `1` |
-| Exponent | `**` | `2**3` | `8` | 
-
-Nedan följer några exempel på aritmetiska uttryck. 
+En tuple består av två eller fler komma-separerade element omslutna av `(` och
+`)`. 
 
 ```python
->>> 1 + 1
-2
->>> 128 - 1
-127
->>> 3*11
-33
->> 6/2
-3
->>> 7 % 2
+>>> (11, "Bosse")      # En två-tuple
+(11, 'Bosse')
+>>> (1, "hej", 127.5)  # En tre-tuple
+(1, 'hej', 127.5)
+>>>
+```
+
+Det första elementet har **index** 0, det andra elementet **index** 1 osv. Med
+hjälp av index inom hak-parenteser `[ ]` får värdet på ett element i en tuple. 
+
+```python
+>>> (11, "Bosse")[0]
+11
+>>> (11, "Bosse")[1]
+'Bosse'
+```
+
+Index kan även användas när en tuple lagrats i en **variabel**.
+
+```python
+>>> t = (1, "hej", 127.5)
+>>> t
+(1, 'hej', 127.5)
+>>> t[0]
 1
->>> 2**3
-8
->>> 2**4
-16
->>> 2**10
-1024
->>> 1+2*(6/2)
-7
+>>> t[1]
+'hej'
+>>> t[2]
+127.5
 ```
 
-## Operatorer för jämförelser
-
-| Jämförelse  | Operator |   Exempel  | Resultat |
-|------------|----------|------------|-----------
-| Lika med   | `==` | `127 == 55` | `False` |
-| Icke lika med | `!=` | `127 != 55` | `True` |
-| Större än | `>` | `127 > 55` | `True` |
-| Mindre än | `<` | `127 < 55` | `False` |
-| Större eller lika med | `>=` | `127 >= 55` | `True` |
-| Minre eller lika med | `<=` | `127 <= 55` | `False` |
-
-Resultatet av en jämförelse, till exempel av två stycken tal är antingen sant eller falskt, dvs antingen `True` eller `False`. 
-
-### ​Lika eller inte lika med
-
-För att kontrollera om två värden är lika med varandra används operator `==` och för att kontrollera om två värden är olika `!=`. 
-
-```python
->>> x = 22   # Tilldelning
->>> y = 11   # Tilldelning
->>> x == y   # Har x samma värde som y?
-False
->>> x == x   # Har x samma värde som x?
-True
->>> x != y   # Är värdet på x inte samma som värdet på y?
-True
->>> x != x   # Är värdet på x inte samma som värdet på x?
-False
-```
-
-### Större än och mindre än
-
-Operatorerna `>`, `<`, `>=` och `>=` kan också användas för att jämföra värden.
-
-```python
->>> x = 22   # Tilldelning
->>> y = 11   # Tilldelning
->>> 127 > 42 # Är 127 större än 42
-True
->>> 42 < 127 # Är 42 mindre än 127
-True
->>> 33 < 33  # Är 33 mindre än 33
-False
->>> 33 <= 33 # Är 33 minre eller lika med 33
-True
->>> 33 >= 33 # Är 33 större eller lika med 33
-True
-```
-
-### ​Kombination av jämförelser
-
-Det går att kombinera flera jämförelser. 
-
-```python
->>> x = 111
->>> 2 < x < 200
-True
->>> x = 555
->>> 2 < x < 200
-False
->>> x = 10
->>> y = 50
->>> z = 99
->>> x < y < z
-True
->>> y = 777
->>> x < y < z
-False
-```
-
-## Logiska operatorer
-
-Logiska operatorer tar en eller två operander av typen `bool` och beräknar ett
-resultat av typen `bool`.
-
-I exemplen nedan antas att `a = 10` och `b = 100`.
-
-| Operator |   Beskrivning | Exempel  | Resultat |
-|------------|----------|------------|-----------
-| `and`  | Logiskt och  | `a < 100 and b > 500` | `False` |
-| `or`   | Logiskt eller | `a < 100 or b > 500` | `True`  |
-| `not`  | Logiskt icke | `not a < 100` | `False` |
-
-
-### ​Logiskt och (and)
-
-På samma sätt som i digitaltekniken kan vi kontrollera om ett antal utryck alla
-är `True` samtidigt med hjälp av operatorn `and`. 
-
-```python
->>> True and True
-True
->>> True and False
-False
->>> False and True
-False
->>> False and False
-False
-```
-
-Operanderna till operatorn `and` kan i sig själva vara uttryck som resulterar i
-`True` eller `False`.
-
-```python
->>> x = 22
->>> y = 11
->>> x > 10 and y < 100
-True
->>> x > 10 and y < 10
-False
->>> x > 10 and y < 100 and (x % 2 == 0)
-True
->>> x = 23
->>> x > 10 and y < 100 and (x % 2 == 0)
-False
-```
-
-Kom ihåg att `x % 2 == 0` är `True` om `x` är ett jämt tal och `False` om `x` är ett udda tal.
-
-### Logiskt eller (or)
-
-På samma sätt som i digitaltekniken kan vi kontrollera om ett eller flera av ett
-antal utryck är `True` med hjälp av operatorn `or`.
-
-```python
->>> True or True
-True
->>> True or False
-True
->>> False or True
-True
->>> False or False
-False
-```
-
-Operanderna till operatorn `or` kan i sig själva vara uttryck som resulterar i
-`True` eller `False`.
-
-```python
->>> x = 22
->>> y = 11
->>> x > 100 or y < 10
-False
->>> x > 100 or y < 100
-True
-```
-
-### ​7.6​ Logiskt icke (not)
-
-På samma sätt som i digitaltekniken kan vi invertera ett sanningsvärde.
-
-```python
->>> not True
-False
->>> not False
-True
-´´´
-
-Operanden till operatorn `not` kan i sig själv vara ett uttryck som resulterar i
-`True` eller `False`.
-
-```python
->>> x = 22
->>> x > 100
-False
->>> not x > 100
-True
-```
-
-### ​7.7​ Godtyckliga logiska uttryck
-
-Det går att konstruera godtyckliga logiska uttryck genom att kombinera vanliga jämförelser med `and`,  `or` och `not`.
-
-```python
->>> x = 22
->>> y = 11
->>> (2 < x < 100) and ( (y > 100) or (y % 2 == 1) )
-True
->>> (2 < x < 100) and ( (y > 100) or not (y % 2 == 1) )
-False
-```
-
-## Utskrift med print
-
-I Pythontolken skrivs resultatet av ett uttryck automatiskt ut på nästa rad. 
-
-```python
->>> 124 + 3 # Aritmetsikt uttryck
-127
-```
-
-I exemplet ovan beräknas värdet av det aritmetsika uttrycket `124 + 3`.
-Resultatet `127` skrivs sedan automatiskt ut på nästa rad och slutligen skrivs
-en ny Python-prompt `>>> ` ut.
-
-Om vi vill vara explicita kan vi använda `print` för att tvinga fram en
-utskrift. 
-
-```python
->>> print 124 + 3
-127
-```
-
-
-## ​Allmänt om funktioner
-
-En funktion löser ett väl avgränsat problem och gör det möjligt att dela in ett problem i mindre delar som sedan kan sättas samman till en större helhet. 
-
-### ​Likheter mellan funktioner i Python och kapslar i Logisim
-
-Funktioner i Python påminner mycket om kapslar i Logisim (digitalteknik). En kapsel i Logisim tar en eller flera inputs och kan generera ett eller flera outputs. På bilden nedan ser vi hur kretsen equal tar två inputs `a` och `b` och beräknar en output `a == b`. 
-
-![image alt text](/images/image_0.png)
-
-På liknande sätt som kapslar i Logisim kan vi betrakta funktioner i Python. På bilden nedan ser vi en grafiskt representation av funktionen `double`. Funktionen tar en parametrar `n` och beräknar det dubbla värdet `2*n`.
-
-![Grafisk representation av funktionen double](/images/double.png)
-
-{{< note title="Returvärde"  >}}
-Resultatet en funktion beräknar kallas **retvärde**, man säger att funktionen
-**returnerar** ett resultat eller **returnerar** ett värde.
-
-{{< /note >}}
-
-{{< note title="Funktion som svart låda"  >}}
-Vi kan betrakta en funktion som en svart låda. Vi kan stoppa in in-data
-(parametrar) i lådan och ut kommer ut-data (resultat), ett returvärde. Den som
-anropar funktionen behöver inte känna till hur lådan ser ut på insidan, dsv inte
-känna till hur returvärdet beräknas. 
-{{< /note >}}
-
-### Söndra och härska
-
-Med hjälp av funktioner kan vi dela in ett problem i mindre delar där varje del
-beräknas med hjälp av en funktion. 
-
-
-På bilden nedan ser vi funktionen `max2` med parametrar `a` och `b` och
-returnerar det tal som är störst av dessa.
-
-![Grafisk representation av funktionen max2](/images/max2.png)
-
-Funktionen `max3` med parametrar `a`, `b` och `c` som returnerar det största
-talen av `a`, `b` och `c` kan nu konstrueras med hjälp
-av funktionen `max2`.
-
-![Grafisk representation av funktionen max3](/images/max3.png)
-
-Funktionen `max2` beräknar det största talet av `a` och `b`, detta tal skickas
-sedan vidare som parameter till `max2` tillsammans med `c` för att på så sätt
-beräkna det största talet av `a`, `b` och `c`. 
-
-### ​ Parameter
-
-En funktion kan ta noll eller flera namngivna parametrar. Dessa parametrar kan sedan användas som variabler i funktionen.
-
-###  Argument
-
-Vid funktionsanrop måste antalet argument överenstämma med antal parametrar. Vid anropet binds parametrarna till argumentens värden. 
-
-###  Returvärde
-
-Om syftet med en funktion är att räkna ut något eller producera något returneras detta i slutet av funktionen med hjälp av **return**. Om en funktion returnerar ett värde går det att fånga upp och tilldela till en variabel eller använda som argument direkt vid ytterligare funktionsanrop.
-
-## Funktioner i Python
-
-Vi skall åter kika på funktionen `double`.
-
-![Grafisk representation av funktionen double](/images/double.png)
-
-## Definition av funktion
-
-För att definiera funktionen `double` i Python kan vi inte rita en bild utan vi
-måste använda text. För att definera funktioner i Python används nyckelordet
-`def`, `kolon`, indrag med `tab` och nyckelordet `return`.  
-
-I Python-tolken kan vi definiera funktionen `double` så här:
-
-```python
->>> def double(x):
-...     return 2*x
-... 
->>> 
-```
-
-Vi skall nu i detalj studera hur det går till att definiera funktionen `double` i
-Python. 
-
-![Definition av funktionen double](/images/def_double.png)
-
-1. När vi definierar en funktion i Python måste vi börja med **nyckelordet** `def`.
-2. Sedan anges namnet på funktionen, i detta fall `double`. 
-3. Inom parenteser namnger vi de parametrar som funktionen beror av separerade av kommatecken, i detta fall den ensamma parametern `n`. 
-4. Med `:` (kolon) anger vi sedan att kommande indragna raderna beskriver vad
-funktionen gör. 
-5. När du trycker på retur-tangenten efter `:` (kolon) ...
-6. ... svarar Python-tolken med tre punter `...` för att visa att definitionen
-   av funktionen inte är klar.
-7. Resterande rader måste vara indragna (tryck tab). 
-8. Använder **nyckelordet** `return` för att berätta vilket resultatet av
-funktionen skall vara, i detta fall resultatet av uttrycket `2*n`.
-9. När du trycker på retur-tangenten i slutet på raden ...
-10. ... svarar Python-tolken med tre punter `...` för att visa att definitionen
-   av funktionen inte är klar.
-11. När du åter trycker på retur-tangenten visar Python-tolken att definitionen
-    av funktionen är klar genom att ... 
-12. ... skriva ut en ny Python-prompt. 
-
-
-## Anrop av funktion
-
-För att anropa en funktion skriver vi namnet på funktionen följt av argument
-till funktionen inom parenteser. Värdet av funktionsanropet blir det värde som
-funktionen returnerar.
-
-```python
->>> double(7)
-14
->>> double(7.5)
-15.0
-```
-
-## Mer om funktioner
-
-För funktioner som har noll parametrar beror returnvärdet inte på någon
-parameter utan måste vara en konstant.
-
-```python
->>> def no_parameters():
-...     return 127 ## En konstant
-... 
->>> no_parameters()
-127
-```
-
-Istället för att explicit ange ett värde för en paramter kan ett uttryck
-användas, till exempel en addition eller ett annat funktionsanrop. 
-
-```python
->>> doulbe(5+5)
-20
-double(double(3))
-12
-```
-
-För funktioner som inte returnerar något
-värde är yftet istället att orsaka någon sidoeffekt, till exempel skriva ut
-något på skärmen men `print` eller ändra på något av argumentet.
-
-```python
->>> def side_effect():
-...     print "I'm printing!"
-...
->>> side_effect()
-I'm printing!
->>>
-```
-
-I exemplet ovan returnerar funktionen `side_effect_a` inte något värde, istället
-skriver funktionen ut till skärmen. 
+Tupler kan även **indexeras bakifrån**, då har det sista elementet index -1, det
+näst sista index -2 osv. 
 
 
 ```python
->>> def side_effect_b(l, e):
-...     l.append(e)
-... 
->>> l = [1, 2, 3]         # Innan funktionsanrop.
->>> side_effect_b(l, 999)
->>> l                     # Efter funktionsanrop.
-[1, 2, 3, 999]
+>>> t[-1]
+127.5
+>>> t[-2]
+'hej'
+>>> t[-3]
+1
 ```
 
-I exemplet ovan utgörs det första argumentet till funktionen
-`side_effect_b()`` av en lista. Funktionen returnerar inte något men har trots
-detta ändrat på listan.
-
-## Returnera True eller False
-
-I de fall en funktion skall returnera True eller False är det onödigt att använda if-then-else. 
-
-I exemplet nedan skall funktionen `return_bool(a, b)` returnera `True` om `2*a > b`. 
+Antal element i en tuple fås med `len`.
 
 ```python
->>> def return_bool(a, b):
-...     if 2*a > b:
-...        return True
-...     else:
-...        return False
-... 
->>> return_bool(3, 5)
-True
->>> return_bool(3, 7)
-False
-```
-Detta går dock att skriva om utan if-then-else. För att förstå varför kikar vi endast på jämförelsen `2*a > b`. 
-
-```python
->>> a = 3
->>> b = 5
->>> 2*a
-6
->>> 2*a > b
-True
-```
-
-Som framgår ovan ger uttrycket `2*a > b`i sig självt värdet `True` eller `False`. Vi kan därför skriva om samma funktion på följande sätt. 
-
-```python
->>> def return_bool(a, b):
-...     return 2*a > b
-... 
->>> return_bool(3, 5)
-True
->>> return_bool(3, 7)
-False
-```
-
-### Return och uttryck som inte har något värde
-
-I Python har inte alla uttryck något värde. 
-
-```python
->>> 2*3            # Har värde och detta värde skrivs ut på nästa rad. 
-6
->>> x = 77         # Resultatet av denna tilldelning saknar värde och inget
-                   # skrivs ut på nästa rad.
->>>
-```
-
-Vad händer om vi försöker returnera ett uttryck som saknar värde?
-
-```
->>> def error(l):
-...     return x = 999
-  File "<stdin>", line 2
-    return x = 999
-             ^
-SyntaxError: invalid syntax
+>>> t1 = (1, "apa")
+>>> t2 = ("nisse", 2.5, True, 44)
+>>> len(t1)
+2
+>>> len(t2)
+4
 ```
 
 ## Listor
@@ -1174,7 +761,69 @@ För att upprepa en sträng ett visst antal gånger och sätta samman dessa till
 'aaaaa'
 ```
 
-## Dictionaries (överkurs)
+## Formatering av strängar
+
+För att underlätta konstruktion av strängar
+kan [sträng-interpolation](https://en.wikipedia.org/wiki/String_interpolation) användas.
+Förutom att användas som aritmetisk modulo-operator används `%` i samband med
+stränginterpolation. 
+
+
+Ett exempel på sträng-interpolation.
+```
+"x = %i" % 127
+     ^   ^ ^
+     |   | |
+     1   2 3
+```
+
+Efter strängen `"x = %i"` följer `%` och sedan talet 127.
+
+I strängen `"x= %i"` utgör `%i` (1) en markör som kommer ersättas med
+sträng-representationen av (3) **tolkat** som heltal (**int**). Strängen och
+data som skall ersätta eventuella markörer separeras av `%` (2).
+
+```python 
+>>> x = 127
+>>> "x = %i" % x
+'x = 127'
+>>>
+```
+
+Det finns andra markörer än `%i`, till exempel `%f` som konverterar (3) till en sträng
+**tolkat** som ett decimaltal (**float**). 
+
+```python 
+>>> x = 127
+>>> "x = %f" % x
+'x = 127'
+>>>
+```
+
+Markören `%s` används för att byta ut en markör mot en **stäng**. 
+
+```python 
+>>> y = "hej"
+>>> "y = %s" % y
+'y = hej'
+>>>
+```
+
+För att ersätta men än en markör anges de värden som skall ersätta markörerna
+inom en **tuple** med lika många element som antal markörer. 
+
+```python
+>>> x = 127
+>>> y = "hej"
+>>> "x = %d och y = %s" % (x, y)
+'x = 127 och y = hej'
+>>>
+```
+
+Läs mer [här](https://docs.python.org/2/library/stdtypes.html#string-formatting) om vilka markörer som finns för sträng-interpolation. 
+
+
+## Uppslagsbok (dictionary) - överkurs
 
 Dictionaries används för att lagra information som hör ihop på olika sätt. Istället för att som i en lista använda index använder sig ett dictionary av nycklar. Varje nyckel måste vara unik, det kan alltså bara finnas exakt en nyckel med ett visst värde i ett dictionary. 
 
@@ -1259,7 +908,523 @@ ordning på nycklarna i en dictionary. När `d` skapades i exemplet ovan angavs
 nyckeln `127` före nycklarna `1.33333` och `complex`. Trots detta skrevs
 nycklarna ut i en annan ordning. 
 
-##​ Nyttiga moduler
+## Aritmetiska operatorer 
+
+| Beräkning  | Operator |   Exempel  | Resultat |
+|------------|----------|------------|-----------
+| Addition   | `+`        | `1 + 1`      | `2`        |
+| Subtraktion| `-` | `5 - 1` | `4` |
+| Multiplikation | `*` | `3.5*2` | `7`|
+| Division | `/` | `6 / 2` | `3` |
+| Modulo (rest vid heltalsdivision) | `%` | `7 % 2` | `1` |
+| Exponent | `**` | `2**3` | `8` | 
+
+Nedan följer några exempel på aritmetiska uttryck. 
+
+```python
+>>> 1 + 1
+2
+>>> 128 - 1
+127
+>>> 3*11
+33
+>> 6/2
+3
+>>> 7 % 2
+1
+>>> 2**3
+8
+>>> 2**4
+16
+>>> 2**10
+1024
+>>> 1+2*(6/2)
+7
+```
+
+## Operatorer för jämförelser
+
+| Jämförelse  | Operator |   Exempel  | Resultat |
+|------------|----------|------------|-----------
+| Lika med   | `==` | `127 == 55` | `False` |
+| Icke lika med | `!=` | `127 != 55` | `True` |
+| Större än | `>` | `127 > 55` | `True` |
+| Mindre än | `<` | `127 < 55` | `False` |
+| Större eller lika med | `>=` | `127 >= 55` | `True` |
+| Minre eller lika med | `<=` | `127 <= 55` | `False` |
+
+Resultatet av en jämförelse, till exempel av två stycken tal är antingen sant eller falskt, dvs antingen `True` eller `False`. 
+
+### ​Lika eller inte lika med
+
+För att kontrollera om två värden är lika med varandra används operator `==` och för att kontrollera om två värden är olika `!=`. 
+
+```python
+>>> x = 22   # Tilldelning
+>>> y = 11   # Tilldelning
+>>> x == y   # Har x samma värde som y?
+False
+>>> x == x   # Har x samma värde som x?
+True
+>>> x != y   # Är värdet på x inte samma som värdet på y?
+True
+>>> x != x   # Är värdet på x inte samma som värdet på x?
+False
+```
+
+### Större än och mindre än
+
+Operatorerna `>`, `<`, `>=` och `>=` kan också användas för att jämföra värden.
+
+```python
+>>> x = 22   # Tilldelning
+>>> y = 11   # Tilldelning
+>>> 127 > 42 # Är 127 större än 42
+True
+>>> 42 < 127 # Är 42 mindre än 127
+True
+>>> 33 < 33  # Är 33 mindre än 33
+False
+>>> 33 <= 33 # Är 33 minre eller lika med 33
+True
+>>> 33 >= 33 # Är 33 större eller lika med 33
+True
+```
+
+### ​Kombination av jämförelser
+
+Det går att kombinera flera jämförelser. 
+
+```python
+>>> x = 111
+>>> 2 < x < 200
+True
+>>> x = 555
+>>> 2 < x < 200
+False
+>>> x = 10
+>>> y = 50
+>>> z = 99
+>>> x < y < z
+True
+>>> y = 777
+>>> x < y < z
+False
+```
+
+## Logiska operatorer
+
+Logiska operatorer tar en eller två operander av typen `bool` och beräknar ett
+resultat av typen `bool`.
+
+I exemplen nedan antas att `a = 10` och `b = 100`.
+
+| Operator |   Beskrivning | Exempel  | Resultat |
+|------------|----------|------------|-----------
+| `and`  | Logiskt och  | `a < 100 and b > 500` | `False` |
+| `or`   | Logiskt eller | `a < 100 or b > 500` | `True`  |
+| `not`  | Logiskt icke | `not a < 100` | `False` |
+
+
+### ​Logiskt och (and)
+
+På samma sätt som i digitaltekniken kan vi kontrollera om ett antal utryck alla
+är `True` samtidigt med hjälp av operatorn `and`. 
+
+```python
+>>> True and True
+True
+>>> True and False
+False
+>>> False and True
+False
+>>> False and False
+False
+```
+
+Operanderna till operatorn `and` kan i sig själva vara uttryck som resulterar i
+`True` eller `False`.
+
+```python
+>>> x = 22
+>>> y = 11
+>>> x > 10 and y < 100
+True
+>>> x > 10 and y < 10
+False
+>>> x > 10 and y < 100 and (x % 2 == 0)
+True
+>>> x = 23
+>>> x > 10 and y < 100 and (x % 2 == 0)
+False
+```
+
+Kom ihåg att `x % 2 == 0` är `True` om `x` är ett jämt tal och `False` om `x` är ett udda tal.
+
+### Logiskt eller (or)
+
+På samma sätt som i digitaltekniken kan vi kontrollera om ett eller flera av ett
+antal utryck är `True` med hjälp av operatorn `or`.
+
+```python
+>>> True or True
+True
+>>> True or False
+True
+>>> False or True
+True
+>>> False or False
+False
+```
+
+Operanderna till operatorn `or` kan i sig själva vara uttryck som resulterar i
+`True` eller `False`.
+
+```python
+>>> x = 22
+>>> y = 11
+>>> x > 100 or y < 10
+False
+>>> x > 100 or y < 100
+True
+```
+
+### ​7.6​ Logiskt icke (not)
+
+På samma sätt som i digitaltekniken kan vi invertera ett sanningsvärde.
+
+```python
+>>> not True
+False
+>>> not False
+True
+```
+
+Operanden till operatorn `not` kan i sig själv vara ett uttryck som resulterar i
+`True` eller `False`.
+
+```python
+>>> x = 22
+>>> x > 100
+False
+>>> not x > 100
+True
+```
+
+### ​7.7​ Godtyckliga logiska uttryck
+
+Det går att konstruera godtyckliga logiska uttryck genom att kombinera vanliga jämförelser med `and`,  `or` och `not`.
+
+```python
+>>> x = 22
+>>> y = 11
+>>> (2 < x < 100) and ( (y > 100) or (y % 2 == 1) )
+True
+>>> (2 < x < 100) and ( (y > 100) or not (y % 2 == 1) )
+False
+```
+
+## Utskrift med print
+
+I Pythontolken skrivs resultatet av ett uttryck automatiskt ut på nästa rad. 
+
+```python
+>>> 124 + 3 # Aritmetsikt uttryck
+127
+```
+
+I exemplet ovan beräknas värdet av det aritmetsika uttrycket `124 + 3`.
+Resultatet `127` skrivs sedan automatiskt ut på nästa rad och slutligen skrivs
+en ny Python-prompt `>>> ` ut.
+
+Om vi vill vara explicita kan vi använda `print` för att tvinga fram en
+utskrift. 
+
+```python
+>>> print 124 + 3
+127
+```
+
+Strängar anges inom `""` eller `''`. Om vi skriver in en sträng i Python-tolken
+svarar Pyton med att skriva ut strängen på nästa rad inom `''`.
+
+```python
+>>> "Hej"
+'Hej'
+>>> 'hopp!'
+'Hopp'
+>>>
+```
+
+Med `print` kan vi skriva ut en sträng utan omslutande `''` 
+
+```python
+>>> print "Hej hopp!"
+Hej hopp
+>>>
+```
+
+Med print kan du skriva ut värdet på variabler.
+
+```python
+>>> a = 127
+>>> b = "Bosse"
+>>> a
+127
+>>> b
+'Bosse'
+>>> print a
+127
+>>> print b
+Bosse
+```
+
+Genom att efter `print` rada upp värden eller variabler skrivs dessa ut
+separarede med ett mellanslag.  
+```python
+>>> print a, b
+127 Bosse
+>>> print a, b, "!"
+127 Bosse !
+```
+
+## ​Allmänt om funktioner
+
+En funktion löser ett väl avgränsat problem och gör det möjligt att dela in ett problem i mindre delar som sedan kan sättas samman till en större helhet. 
+
+### ​Likheter mellan funktioner i Python och kapslar i Logisim
+
+Funktioner i Python påminner mycket om kapslar i Logisim (digitalteknik). En kapsel i Logisim tar en eller flera inputs och kan generera ett eller flera outputs. På bilden nedan ser vi hur kretsen equal tar två inputs `a` och `b` och beräknar en output `a == b`. 
+
+![image alt text](/images/image_0.png)
+
+På liknande sätt som kapslar i Logisim kan vi betrakta funktioner i Python. På bilden nedan ser vi en grafiskt representation av funktionen `double`. Funktionen tar en parametrar `n` och beräknar det dubbla värdet `2*n`.
+
+![Grafisk representation av funktionen double](/images/double.png)
+
+{{< note title="Returvärde"  >}}
+Resultatet en funktion beräknar kallas **retvärde**, man säger att funktionen
+**returnerar** ett resultat eller **returnerar** ett värde.
+
+{{< /note >}}
+
+{{< note title="Funktion som svart låda"  >}}
+Vi kan betrakta en funktion som en svart låda. Vi kan stoppa in in-data
+(parametrar) i lådan och ut kommer ut-data (resultat), ett returvärde. Den som
+anropar funktionen behöver inte känna till hur lådan ser ut på insidan, dsv inte
+känna till hur returvärdet beräknas. 
+{{< /note >}}
+
+### Söndra och härska
+
+Med hjälp av funktioner kan vi dela in ett problem i mindre delar där varje del
+beräknas med hjälp av en funktion. 
+
+
+På bilden nedan ser vi funktionen `max2` med parametrar `a` och `b` och
+returnerar det tal som är störst av dessa.
+
+![Grafisk representation av funktionen max2](/images/max2.png)
+
+Funktionen `max3` med parametrar `a`, `b` och `c` som returnerar det största
+talen av `a`, `b` och `c` kan nu konstrueras med hjälp
+av funktionen `max2`.
+
+![Grafisk representation av funktionen max3](/images/max3.png)
+
+Funktionen `max2` beräknar det största talet av `a` och `b`, detta tal skickas
+sedan vidare som parameter till `max2` tillsammans med `c` för att på så sätt
+beräkna det största talet av `a`, `b` och `c`. 
+
+### ​ Parameter
+
+En funktion kan ta noll eller flera namngivna parametrar. Dessa parametrar kan sedan användas som variabler i funktionen.
+
+###  Argument
+
+Vid funktionsanrop måste antalet argument överenstämma med antal parametrar. Vid anropet binds parametrarna till argumentens värden. 
+
+###  Returvärde
+
+Om syftet med en funktion är att räkna ut något eller producera något returneras detta i slutet av funktionen med hjälp av **return**. Om en funktion returnerar ett värde går det att fånga upp och tilldela till en variabel eller använda som argument direkt vid ytterligare funktionsanrop.
+
+## Funktioner i Python
+
+Vi skall åter kika på funktionen `double`.
+
+![Grafisk representation av funktionen double](/images/double.png)
+
+## Definition av funktion
+
+För att definiera funktionen `double` i Python kan vi inte rita en bild utan vi
+måste använda text. För att definera funktioner i Python används nyckelordet
+`def`, `kolon`, indrag med `tab` och nyckelordet `return`.  
+
+I Python-tolken kan vi definiera funktionen `double` så här:
+
+```python
+>>> def double(x):
+...     return 2*x
+... 
+>>> 
+```
+
+Vi skall nu i detalj studera hur det går till att definiera funktionen `double` i
+Python. 
+
+![Definition av funktionen double](/images/def_double.png)
+
+1. När vi definierar en funktion i Python måste vi börja med **nyckelordet** `def`.
+2. Sedan anges namnet på funktionen, i detta fall `double`. 
+3. Inom parenteser namnger vi de parametrar som funktionen beror av separerade av kommatecken, i detta fall den ensamma parametern `n`. 
+4. Med `:` (kolon) anger vi sedan att kommande indragna raderna beskriver vad
+funktionen gör. 
+5. När du trycker på retur-tangenten efter `:` (kolon) ...
+6. ... svarar Python-tolken med tre punter `...` för att visa att definitionen
+   av funktionen inte är klar.
+7. Resterande rader måste vara indragna (tryck tab). 
+8. Använder **nyckelordet** `return` för att berätta vilket resultatet av
+funktionen skall vara, i detta fall resultatet av uttrycket `2*n`.
+9. När du trycker på retur-tangenten i slutet på raden ...
+10. ... svarar Python-tolken med tre punter `...` för att visa att definitionen
+   av funktionen inte är klar.
+11. När du åter trycker på retur-tangenten visar Python-tolken att definitionen
+    av funktionen är klar genom att ... 
+12. ... skriva ut en ny Python-prompt. 
+
+
+## Anrop av funktion
+
+För att anropa en funktion skriver vi namnet på funktionen följt av argument
+till funktionen inom parenteser. Värdet av funktionsanropet blir det värde som
+funktionen returnerar.
+
+```python
+>>> double(7)
+14
+>>> double(7.5)
+15.0
+```
+
+## Mer om funktioner
+
+För funktioner som har noll parametrar beror returnvärdet inte på någon
+parameter utan måste vara en konstant.
+
+```python
+>>> def no_parameters():
+...     return 127 ## En konstant
+... 
+>>> no_parameters()
+127
+```
+
+Istället för att explicit ange ett värde för en paramter kan ett uttryck
+användas, till exempel en addition eller ett annat funktionsanrop. 
+
+```python
+>>> doulbe(5+5)
+20
+double(double(3))
+12
+```
+
+För funktioner som inte returnerar något
+värde är yftet istället att orsaka någon sidoeffekt, till exempel skriva ut
+något på skärmen men `print` eller ändra på något av argumentet.
+
+```python
+>>> def side_effect():
+...     print "I'm printing!"
+...
+>>> side_effect()
+I'm printing!
+>>>
+```
+
+I exemplet ovan returnerar funktionen `side_effect_a` inte något värde, istället
+skriver funktionen ut till skärmen. 
+
+
+```python
+>>> def side_effect_b(l, e):
+...     l.append(e)
+... 
+>>> l = [1, 2, 3]         # Innan funktionsanrop.
+>>> side_effect_b(l, 999)
+>>> l                     # Efter funktionsanrop.
+[1, 2, 3, 999]
+```
+
+I exemplet ovan utgörs det första argumentet till funktionen
+`side_effect_b()`` av en lista. Funktionen returnerar inte något men har trots
+detta ändrat på listan.
+
+## Returnera True eller False
+
+I de fall en funktion skall returnera True eller False är det onödigt att använda if-then-else. 
+
+I exemplet nedan skall funktionen `return_bool(a, b)` returnera `True` om `2*a > b`. 
+
+```python
+>>> def return_bool(a, b):
+...     if 2*a > b:
+...        return True
+...     else:
+...        return False
+... 
+>>> return_bool(3, 5)
+True
+>>> return_bool(3, 7)
+False
+```
+Detta går dock att skriva om utan if-then-else. För att förstå varför kikar vi endast på jämförelsen `2*a > b`. 
+
+```python
+>>> a = 3
+>>> b = 5
+>>> 2*a
+6
+>>> 2*a > b
+True
+```
+
+Som framgår ovan ger uttrycket `2*a > b`i sig självt värdet `True` eller `False`. Vi kan därför skriva om samma funktion på följande sätt. 
+
+```python
+>>> def return_bool(a, b):
+...     return 2*a > b
+... 
+>>> return_bool(3, 5)
+True
+>>> return_bool(3, 7)
+False
+```
+
+### Return och uttryck som inte har något värde
+
+I Python har inte alla uttryck något värde. 
+
+```python
+>>> 2*3            # Har värde och detta värde skrivs ut på nästa rad. 
+6
+>>> x = 77         # Resultatet av denna tilldelning saknar värde och inget
+                   # skrivs ut på nästa rad.
+>>>
+```
+
+Vad händer om vi försöker returnera ett uttryck som saknar värde?
+
+```
+>>> def error(l):
+...     return x = 999
+  File "<stdin>", line 2
+    return x = 999
+             ^
+SyntaxError: invalid syntax
+```
+
+## Nyttiga moduler
 
 För att använda en modul måste de först importeras. Det kan göras på fler olika sätt. Det vanligaste är via `import`:
 
@@ -1452,7 +1617,7 @@ Första gången `next()` anropas sätts `self.value` till `(limit + 1) % (limit 
 1)` vilket är `0`, dvs det första värdet i sekvensen, därav att vi sätter vardet
 på `self.value` till `limit` i konstruktorn. Nästa gång `next()` anropas får vi
 `(0+1) % (limit + 1)` vilket för `limit  > 0` blir `1`. Om `next()` anropas igen
-får vi `(1+1) % (limit + 1)´ vilket för `limit  > 1` blir `2`. För varje gång `next()` anropas kommer räknaren att öka med ett och när vi når `limit + 1` börjar sekvensen om från `0`.
+får vi `(1+1) % (limit + 1)` vilket för `limit  > 1` blir `2`. För varje gång `next()` anropas kommer räknaren att öka med ett och när vi når `limit + 1` börjar sekvensen om från `0`.
 
 Vi kan nu testa att skapa två objekt från klassen `Counter`, ett med `limit 6` och ett med `limit 10`. 
 

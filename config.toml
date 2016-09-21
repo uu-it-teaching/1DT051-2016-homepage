@@ -58,86 +58,106 @@ googleAnalytics = ""
 
 [[menu.main]]
   name = "Start"
-  weight = -11
+  weight = 10
 
 [[menu.main]]
   name = "Syfte och översikt"
   parent = "Start"
   url = "./"
-  weight = 1
+  weight = 11
 
 [[menu.main]]
   name = "Python i korthet"
   parent = "Start"
   url = "python-i-korthet/"
-  weight = 2
+  weight = 12
 
 [[menu.main]]
   name = "Övriga resurser"
   parent = "Start"
   url = "resources/"
-  weight = 3
+  weight = 13
 
 #### Part 1
+
+[[menu.main]]
+  name = "Del 1"
+  weight = 20
 
 [[menu.main]]
   name = "Syfte och överskikt"
   identifier = "part-1-about"
   parent = "Del 1"
   url    = "programming/part-1/"
-  weight = -1 
+  weight = 21 
 
 [[menu.main]]
   name = "Uppgifter"
   identifier = "part-1-assignment"
   parent = "Del 1"
   url    = "programming/part-1/assignment/"
+  weight = 22
 
 [[menu.main]]
   name = "Redovisning"
   identifier = "part-1-grading"
   parent = "Del 1"
-  weight = 10
+  weight = 23
   url    = "programming/part-1/grading/"
 
 
 #### Part 2
 
 [[menu.main]]
+  name = "Del 2"
+  weight = 30
+
+[[menu.main]]
   name = "Syfte och översikit"
   identifier = "part-2-about"
   parent = "Del 2"
   url    = "programming/part-2/"
+  weight = 31
 
 [[menu.main]]
   name = "Uppgifter"
   identifier = "part-2-assignment"
   parent = "Del 2"
   url    = "programming/part-2/assignment/"
-
+  weight = 32
 
 #### Part 3
+
+[[menu.main]]
+  name = "Del 3"
+  weight = 40
 
 [[menu.main]]
   name = "Syfte och översikt"
   identifier ="part-3-about"
   parent = "Del 3"
   url    = "programming/part-3/"
+  weight = 41
 
 [[menu.main]]
   name = "Uppgifter"
   identifier = "part-3-assignment"
   parent = "Del 3"
   url    = "programming/part-3/assignment/"
-
+  weight = 42
 
 #### Projekt
+
+[[menu.main]]
+  name = "Projekt"
+  weight = 50
 
 [[menu.main]]
   name = "Syfte och översikt"
   identifier = "project-about"
   parent = "Projekt"
   url    = "programming/project/"
+  weight = 51
 
 [blackfriday]
 	smartypants	= true
