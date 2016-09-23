@@ -120,11 +120,30 @@ googleAnalytics = ""
   weight = 31
 
 [[menu.main]]
+  name = "Workshop"
+  identifier = "part-2-workshop"
+  parent = "Del 2"
+  url = "programming/part-2/workshop"
+  weight = 32
+
+[[menu.main]]
   name = "Uppgifter"
   identifier = "part-2-assignment"
   parent = "Del 2"
   url    = "programming/part-2/assignment/"
-  weight = 32
+  weight = 33
+
+[[menu.main]]
+  name = "Frivillig fördjupning"
+  parent = "Del 2"
+  url = "programming/part-2/optional/"
+  weight = 34
+
+[[menu.main]]
+  name = "Redovisning"
+  parent = "Del 2"
+  url = "programming/part-2/grading/"
+  weight = 35
 
 #### Part 3
 

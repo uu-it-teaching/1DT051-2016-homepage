@@ -41,7 +41,7 @@ framgår på kursens sida i **Studentportalen** > **Gruppindelningar** >
 
 ## Förberedelser
 
-Innan du går på denna workshop skall du:
+Innan du börjar med del 1 skall du:
 
 - översiktligt läsa igenom denna
 [bakgrund][1] som

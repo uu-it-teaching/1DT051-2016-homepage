@@ -3,43 +3,45 @@ title: Python i korthet
 ---
 
 Python i korthet är en sammanfattning av det du kommer lära dig om
-programmeringssrpåket Python på momentet Problemlösning och programmering.
+programmeringsspråket Python på momentet Problemlösning och programmering.
 
 - Samma eller liknande information som återfinns i Python i korthet hittar du
 även på [slides från workshops](../resources/#slides-från-föreläsningar-och-workshops).
 
 - Du kan använda Python i korthet för att förbereda dig på egen hand inför
 workshops och uppgifter eller som en uppslagsbok när du glömt eller vill
-kontrollera om du minns rätt.  
+kontrollera om du minns rätt.
 
 {{< warning title="Python 2.7" >}}
 Den version av Python som finns installerad på Uppsala universitets Linux-system
 och som kommer användas under momentet problemlösning och programmering är
-Python 2.7. Python i korthet beskriver därför Python 2.7. 
+Python 2.7. Python i korthet beskriver därför Python 2.7.
 {{< /warning >}}
 
 ## Starta en terminal
 
-Starta en Linux-terminal. 
+Starta en Linux-terminal.
 
-På Uppsala universitets Linux-system ser prompten ut så här.
+På Uppsala universitets Linux-system ser **terminal-prompten** ut så här.
 
 ```shell
 abcd1234@cronstedt:~$
 ```
 
-Notera att istället för `abcd1234` bör du se ditt användarnamn och att du kan se ett annat [servernamn](http://www.it.uu.se/datordrift/maskinpark/linux) än `cronstedt`.
+Notera att istället för `abcd1234` bör du se ditt användarnamn och att du kan se
+ett annat [servernamn](http://www.it.uu.se/datordrift/maskinpark/linux) än
+`cronstedt`.
 
 Fortsättningsvis kommer följande prompt att användas för att ange att du
 skall skriva något i terminalen.
 
 ```shell
 linux>
-``` 
+```
 
 ## Python 2.7
 
-Kontrollera att du har Python 2.7 installerat. 
+Kontrollera att du har Python 2.7 installerat.
 
 ```shell
 linux> python --version
@@ -47,7 +49,7 @@ Python 2.7.6
 ```
 
 Så länge du har någon variant av Python 2.7.x kommer du kunna använda dig av
-denna version. 
+denna version.
 
 Har du Python 3 installerat kommer inte allt att fungera på exakt samma sätt
 som för Python 2.7 eftersom [Python 3 skiljer sig på ett antal punkter från
@@ -57,7 +59,7 @@ Python 2](https://docs.python.org/3/whatsnew/3.0.html).
 ## Starta en Python-tolk
 
 För att starta en Python-tolk skriver du `python` vid Linux-prompten och trycker
-enter. 
+enter.
 
 ```shell
 linux> python
@@ -68,7 +70,7 @@ Du bör nu se något liknande detta.
 ```shell
 Python 2.7.3 (default, Jan 23 2013, 14:41:42) [C] on sunos5
 Type "help", "copyright", "credits" or "license" for more information.
->>> 
+>>>
 ```
 
 Python-tolken använder sig av prompten `>>> `. Efter prompten `>>> ` kan du
@@ -78,7 +80,7 @@ visas på raden under. Sedan skriv en ny prompt `>>> ` ut.
 ## Python som miniräknare
 
 Prova att skriva in `1+2` direkt efter Python-prompten `>>> ` och tryck sedan på
-**enter**. 
+**enter**.
 
 ```python
 >>> 1+2
@@ -86,8 +88,8 @@ Prova att skriva in `1+2` direkt efter Python-prompten `>>> ` och tryck sedan p�
 >>>
 ```
 
-Notera att resultatet av beräkningen `1+3` skrivs ut på en egen rad och
-slutligen att en ny Python-prompt `>>> ` skrivs ut på en egen rad.  
+Notera att resultatet av beräkningen `1+2` skrivs ut på en egen rad och
+slutligen att en ny Python-prompt `>>> ` skrivs ut på en egen rad.
 
 Prova att skriva in fler beräkningar.
 
@@ -95,31 +97,31 @@ Prova att skriva in fler beräkningar.
 >>> 5*2
 10
 >>> 3.5*2
-7
+7.0
 >>> 1+2+3+4+5
 15
 ```
 
-Parenteser kan användas för att gruppera. 
+Parenteser kan användas för att gruppera.
 
 ```python
 >>> 2*(4-1)
 6
 ```
 
-## ​Kommentarer 
+## ​Kommentarer
 
 Med hjälp av tecknet `#` kan kommentarer läggas till i Python-koden, dvs text
 som endast är till för att läsas av människor men som Python kommer ignorera.
 
-Allt efter tecknet `#` på en rad utgör en kommentar (inklusive tecknet `#` självt). 
+Allt efter tecknet `#` på en rad utgör en kommentar (inklusive tecknet `#` självt).
 
 ```python
 >>> 1+2 # Ett plus två
 3
 ```
 
-I exemplet ovan utgör `# Ett plus två` en kommentar. 
+I exemplet ovan utgör `# Ett plus två` en kommentar.
 
 
 ## Blanktecken
@@ -127,7 +129,7 @@ I exemplet ovan utgör `# Ett plus två` en kommentar.
 Med blanktecken menas **mellanslag** eller **tab**.
 
 När du skriver kod i Python-tolken får du inte ha ett eller flera inledande
-blanktecken efter Python-prompten `>>> `. 
+blanktecken efter Python-prompten `>>> `.
 
 ```python
 >>> 1+1       # Detta fungerar
@@ -138,10 +140,10 @@ IndentationError: unexpected indent
 >>>
 ```
 
-Du kan dock ha ett eller flera blanktecken mellan en operand och en operator. 
+Du kan dock ha ett eller flera blanktecken mellan en operand och en operator.
 
 ```python
->>> 1+2       # Inga blanksteg mellan operatorn + och operanderna 1 och 1
+>>> 1+2       # Inga blanksteg mellan operatorn + och operanderna 1 och 2
 2
 >>> 1  +2     # Blanksteg mellan operanden 1 och operatorn +
 3
@@ -154,7 +156,7 @@ Du kan dock ha ett eller flera blanktecken mellan en operand och en operator.
 ## Variabler
 
 En variabel är något som kan ändras. En variabel är ett sätt att komma ihåg ett
-värde genom att på en namngiven plats lagra detta värde.  
+värde genom att på en namngiven plats lagra detta värde.
 
 För att lagra ett värde i en variabel används operatorn `=`.
 
@@ -204,7 +206,7 @@ programmeraren) vilken sorts information datat bär på. Eftersom all informatio
 i datorn, även text och bilder, internt hanteras som tal är datatyper ett sätt
 att se skillnad på vad talen representerar.
 
-I Python kan vi använda `type` för att ta reda på vilken datatyp data har. 
+I Python kan vi använda `type` för att ta reda på vilken datatyp data har.
 
 ```python
 >>> type(1)
@@ -234,7 +236,7 @@ Exempel på aritmetiska beräkningar med heltal.
 ```
 
 {{< note title="Egenskap hos heltal" >}}
-Adderar, subtraherar eller multiplicerar vi två heltal får vi ett nytt heltal. 
+Adderar, subtraherar eller multiplicerar vi två heltal får vi ett nytt heltal.
 {{< /note >}}
 
 Hur fungerar det med divsion av heltal?
@@ -249,7 +251,7 @@ Hur fungerar det med divsion av heltal?
 I exemplen ovan ser vi att kvoten vid heltalsdivision av 1 med 3 är 0. Vid heltalsdivision av 5 med 2 är kvoten 2.
 
 {{< note title="Division av heltal">}}
-Vid divison av två heltal blir resultatet alltid ett heltal i Python. 
+Vid divison av två heltal blir resultatet alltid ett heltal i Python.
 {{< /note >}}
 
 Resten vid heltalsdivision beräknas  med hjälp av modulo-operatorn `%` (procent).
@@ -263,7 +265,7 @@ Resten vid heltalsdivision beräknas  med hjälp av modulo-operatorn `%` (procen
 
 I exemplen ovan ser vi att resten vid heltalsdivision av 1 med 3 är 1. Vid
  heltalsdivision av 11 med 3 är resten 2.
- 
+
 Allmänt gäller för `kvot = a / b` och `rest = a % b` att  `a = b*kvot + rest`.
 
 ```python
@@ -283,7 +285,7 @@ Allmänt gäller för `kvot = a / b` och `rest = a % b` att  `a = b*kvot + rest`
 
 ## Decimaltal (float)
 
-Decimal tal kallas även för flyttal och skrivs alltid med decimaldel, även om den är 0. 
+Decimal tal kallas även för flyttal och skrivs alltid med decimaldel, även om den är 0.
 
 ```python
 >>> a = 3     # Heltal
@@ -316,7 +318,7 @@ Hur fungerar det med flyttal och aritmetik?
 {{< note title="Aritmetik med flyttal">}}
 Vid addition, subtraktion, multiplikation eller division i Python räcker det att en av
 operanderna är ett flyttal för att även resultatet skall bli ett flyttal. Om
-båda operanderna är heltal blir resultet ett heltal. 
+båda operanderna är heltal blir resultet ett heltal.
 {{< /note >}}
 
 ## Sanningsvärden (bool)
@@ -329,7 +331,7 @@ Ordet bool kommer ur Boolesk algebra, som namngivits efter matematikern [George 
 ## Tupler
 
 En tuple består av två eller fler komma-separerade element omslutna av `(` och
-`)`. 
+`)`.
 
 ```python
 >>> (11, "Bosse")      # En två-tuple
@@ -340,7 +342,7 @@ En tuple består av två eller fler komma-separerade element omslutna av `(` och
 ```
 
 Det första elementet har **index** 0, det andra elementet **index** 1 osv. Med
-hjälp av index inom hak-parenteser `[ ]` får värdet på ett element i en tuple. 
+hjälp av index inom hak-parenteser `[ ]` får värdet på ett element i en tuple.
 
 ```python
 >>> (11, "Bosse")[0]
@@ -364,7 +366,7 @@ Index kan även användas när en tuple lagrats i en **variabel**.
 ```
 
 Tupler kan även **indexeras bakifrån**, då har det sista elementet index -1, det
-näst sista index -2 osv. 
+näst sista index -2 osv.
 
 
 ```python
@@ -393,7 +395,7 @@ Listor är praktiska och används flitigt i Python. En lista kännetecknas av at
 
 ### Skapa listor
 
-Så här skapar du en ny tom lista. 
+Så här skapar du en ny tom lista.
 
 ```python
 >>> l = []  # Skapa den tomma listan l
@@ -401,7 +403,7 @@ Så här skapar du en ny tom lista.
 []
 ```
 
-Det går även att skapa listor som inte är tomma genom att direkt rada upp ett antal olika element. Notera att det går utmärkt att blanda olika typer av värden i en och samma lista, till exempel heltal, strängar och andra listor. När du skapar en lista går det att ange ett godtyckligt uttryck som värde. 
+Det går även att skapa listor som inte är tomma genom att direkt rada upp ett antal olika element. Notera att det går utmärkt att blanda olika typer av värden i en och samma lista, till exempel heltal, strängar och andra listor. När du skapar en lista går det att ange ett godtyckligt uttryck som värde.
 
 ```python
 >>> a = [1, 2, 3]
@@ -417,7 +419,7 @@ Det går även att skapa listor som inte är tomma genom att direkt rada upp ett
 
 ### Längden på en lista
 
-Det finns en inbyggd funktion `len()` som används för att ta reda på hur många element en lista innehåller. 
+Det finns en inbyggd funktion `len()` som används för att ta reda på hur många element en lista innehåller.
 
 ```python
 >>> a = [0, 1, 2, 3, 4]
@@ -427,9 +429,9 @@ Det finns en inbyggd funktion `len()` som används för att ta reda på hur mån
 
 ### Index
 
-Elementen i en lista indexeras så att det första elementet har index 0, det andra elementet index 1 osv. Med negativa index indexeras listan bakifrån så att sista elementent har index -1, det nästa sista elementet index -2 osv. 
+Elementen i en lista indexeras så att det första elementet har index 0, det andra elementet index 1 osv. Med negativa index indexeras listan bakifrån så att sista elementent har index -1, det nästa sista elementet index -2 osv.
 
-Exempel: 
+Exempel:
 
 ```python
 >>> ns = [7, 11, 89, 44, 5]
@@ -443,7 +445,7 @@ Exempel:
 
 ### Plocka ut värdet på ett element i en lista
 
-För att få värdet på ett element i en lista används hakparenteser tillsammans med index. 
+För att få värdet på ett element i en lista används hakparenteser tillsammans med index.
 
 ```python
 >>> xs = ["apa", 22, "bosse", -9]
@@ -472,24 +474,24 @@ För att ändra värdet på ett element i en lista används hakparenteser tillsa
 
 ### Lägga till ett nytt värde sist i en lista
 
-För att lägga till ett nytt element sist i en lista används **metoden** `append()`. 
+För att lägga till ett nytt element sist i en lista används **metoden** `append()`.
 
 ```python
 >>> alpha = ['a', 'b', 'c']
 >>> alpha.append('d')
 >>> alpha
-['a', 'b', 'c', 'd'] 
+['a', 'b', 'c', 'd']
 ```
 
 ### Kopiera hela eller delar av en lista
 
 För att skapa en kopia av en lista eller delar av en lista används
 slice-notation `[start : (stop+1)]` vilket betyder att kopian skall innehålla
-alla element mellan index `start` och index `stop`. 
+alla element mellan index `start` och index `stop`.
 
 ```python
 >>> alpha = ['a', 'b', 'c']
->>> beta = alpha[:]         ## En kopia av alla element i alpha. 
+>>> beta = alpha[:]         ## En kopia av alla element i alpha.
 >>> alpha.append('d')       ## Lägg till 'd' sist i listan alpha.
 >>> alpha
 ['a', 'b', 'c', 'd']        ## Listan alpha är uppdaterad ...
@@ -516,52 +518,11 @@ Start och stop kan i sin tur vara uttryck.
 ['a', 'b', 'c']
 ```
 
-### Slingor över alla element i en lista
-
-För att konstruera slingor över listor i Python används konstruktionen `for x in xs`. 
-
-```python
->>> xs = [1,2,3]      # Listan xs
-for x in xs:          # Slinga över alla element i listan xs
-...     print x       # För varje varv i slingan tilldelas x ett värde ur listan.
-... 
-1
-2
-3
-```
-
-Variabelnamnen `x` och `xs` kan bytas ut mot godtyckliga variabelnamn som bättre
-passar sammanhanget. 
-
-```python
->>> xs = [1,2,3]
->>> names = ["bosse", "greta", "nisse"]
->>> for name in names:
-...     print "Hej " + name
-...
-Hej bosse
-Hej greta
-Hej nisse
->>>
-```
-
-Listan behöver inte lagras i en variabel utan kan anges direkt. 
-
-```python
->>> for n in [1,2,3,4]:
-...     print 2*n
-...
-2
-4
-6
-8
-```
-
 ## ​Strängar och tecken
 
-Strängar används för att lagra och manipulera text. En sträng består av ett antal olika tecken och omges av enkla eller dubbla citattecken. 
+Strängar används för att lagra och manipulera text. En sträng består av ett antal olika tecken och omges av enkla eller dubbla citattecken.
 
-Strängar påminner en hel del om listor. I Python fungerar mycket ungefär likadant för strängar som det gör för listor. 
+Strängar påminner en hel del om listor. I Python fungerar mycket ungefär likadant för strängar som det gör för listor.
 
 ### Skapa strängar
 
@@ -571,14 +532,14 @@ Så här skapar du strängar i Python.
 >>> a = ""                 ## En tom sträng utan några tecken.
 >>> a
 ''
->>> b = "A string I am!"   ## En icke-tom sträng med ett antal tecken. 
+>>> b = "A string I am!"   ## En icke-tom sträng med ett antal tecken.
 >>> b
 'A string I am!'
 ```
 
 ### Längden på en sträng
 
-Precis som för listor används len() för att ta reda på längden (antal tecken) i en sträng. 
+Precis som för listor används len() för att ta reda på längden (antal tecken) i en sträng.
 
 ```python
 >>> a = ""
@@ -588,12 +549,12 @@ Precis som för listor används len() för att ta reda på längden (antal tecke
 >>> len(b)
 14
 ```
-
+    
 ### Index
 
 Tecknen i en sträng kan på samma sätt som elementen i en  lista indexeras så att det första tecknet har index 0, det andra tecknet  index 1 osv. Även här kan negativa index användas för att indexera bakifrån.
 
-Exempel: 
+Exempel:
 
 ```python
 >>> s = "Bosse"
@@ -623,7 +584,7 @@ På samma sätt som för listor går det att plocka ut enskilda element, dvs ens
 
 ### Kopiera hela eller delar av en sträng
 
-På samma sätt som för listor går det att plocka ut delar av en sträng med hjälp av slice-notation. 
+På samma sätt som för listor går det att plocka ut delar av en sträng med hjälp av slice-notation.
 
 ```python
 >>> s = '0123456789ABCDEF'
@@ -633,31 +594,9 @@ På samma sätt som för listor går det att plocka ut delar av en sträng med h
 '0123'
 >>> s[3:8]                  ## Från index 3 till 7 (8-1)
 '34567'
->>> s[3:]                   ## Från index 3 till sista. 
+>>> s[3:]                   ## Från index 3 till sista.
 '3456789ABCDEF'
 ```
-
-### Slingor över alla tecken i en sträng
-
-På samma sätt som för listor går det att göra en slinga över alla element (tecken) i en sträng.
-
-```python
->>> s = "Print me!"
->>> for c in s:
-...     print c
-... 
-P
-r
-i
-n
-t
-
-m
-e
-!
-```
-
-Slingan stegar igenom strängen från första till sista tecknet. För varje varv i slingar tilldelas variabeln c ett nytt värde.
 
 ### Ändra värdet på ett tecken i en sträng
 
@@ -677,7 +616,7 @@ TypeError: 'str' object does not support item assignment
 
 ### Jämföra tecken med varandra
 
-I Python går det bra att jämföra tecken med varandra. 
+I Python går det bra att jämföra tecken med varandra.
 
 ```python
 >>> 'a' == 'a'
@@ -702,11 +641,11 @@ True
 True
 ```
 
-Dessa jämförelser bygger på de olika tecknens [ASCII](http://sv.wikipedia.org/wiki/ASCII)-värden. 
+Dessa jämförelser bygger på de olika tecknens [ASCII](http://sv.wikipedia.org/wiki/ASCII)-värden.
 
 ### Ta reda på ett teckens ASCII-värde
 
-I python används funktionen `ord` för att ta reda på ett teckens ASCII-värde. 
+I python används funktionen `ord` för att ta reda på ett teckens ASCII-värde.
 
 ```python
 >>> ord('a')
@@ -743,7 +682,7 @@ För att konvertera ett ASCII-värde till ett tecken används funktionen `chr`.
 
 ### Sätta samman strängar
 
-I Python går det att slå samman strängar med operatorn `+` (plus). 
+I Python går det att slå samman strängar med operatorn `+` (plus).
 
 ```python
 >>> "abc" + "def"
@@ -752,7 +691,7 @@ I Python går det att slå samman strängar med operatorn `+` (plus).
 
 ### Upprepa en sträng
 
-För att upprepa en sträng ett visst antal gånger och sätta samman dessa till en ny sträng går det att använda operatorn `*` (stjärna/multiplikation). 
+För att upprepa en sträng ett visst antal gånger och sätta samman dessa till en ny sträng går det att använda operatorn `*` (stjärna/multiplikation).
 
 ```python
 >>> "Blip "*3
@@ -761,12 +700,14 @@ För att upprepa en sträng ett visst antal gånger och sätta samman dessa till
 'aaaaa'
 ```
 
+
+
 ## Formatering av strängar
 
 För att underlätta konstruktion av strängar
 kan [sträng-interpolation](https://en.wikipedia.org/wiki/String_interpolation) användas.
 Förutom att användas som aritmetisk modulo-operator används `%` i samband med
-stränginterpolation. 
+stränginterpolation.
 
 
 Ett exempel på sträng-interpolation.
@@ -783,7 +724,7 @@ I strängen `"x= %i"` utgör `%i` (1) en markör som kommer ersättas med
 sträng-representationen av (3) **tolkat** som heltal (**int**). Strängen och
 data som skall ersätta eventuella markörer separeras av `%` (2).
 
-```python 
+```python
 >>> x = 127
 >>> "x = %i" % x
 'x = 127'
@@ -791,18 +732,18 @@ data som skall ersätta eventuella markörer separeras av `%` (2).
 ```
 
 Det finns andra markörer än `%i`, till exempel `%f` som konverterar (3) till en sträng
-**tolkat** som ett decimaltal (**float**). 
+**tolkat** som ett decimaltal (**float**).
 
-```python 
+```python
 >>> x = 127
 >>> "x = %f" % x
 'x = 127'
 >>>
 ```
 
-Markören `%s` används för att byta ut en markör mot en **stäng**. 
+Markören `%s` används för att byta ut en markör mot en **stäng**.
 
-```python 
+```python
 >>> y = "hej"
 >>> "y = %s" % y
 'y = hej'
@@ -810,7 +751,7 @@ Markören `%s` används för att byta ut en markör mot en **stäng**.
 ```
 
 För att ersätta men än en markör anges de värden som skall ersätta markörerna
-inom en **tuple** med lika många element som antal markörer. 
+inom en **tuple** med lika många element som antal markörer.
 
 ```python
 >>> x = 127
@@ -820,23 +761,23 @@ inom en **tuple** med lika många element som antal markörer.
 >>>
 ```
 
-Läs mer [här](https://docs.python.org/2/library/stdtypes.html#string-formatting) om vilka markörer som finns för sträng-interpolation. 
+Läs mer [här](https://docs.python.org/2/library/stdtypes.html#string-formatting) om vilka markörer som finns för sträng-interpolation.
 
 
 ## Uppslagsbok (dictionary) - överkurs
 
-Dictionaries används för att lagra information som hör ihop på olika sätt. Istället för att som i en lista använda index använder sig ett dictionary av nycklar. Varje nyckel måste vara unik, det kan alltså bara finnas exakt en nyckel med ett visst värde i ett dictionary. 
+Dictionaries används för att lagra information som hör ihop på olika sätt. Istället för att som i en lista använda index använder sig ett dictionary av nycklar. Varje nyckel måste vara unik, det kan alltså bara finnas exakt en nyckel med ett visst värde i ett dictionary.
 
-Till varje nyckel kopplas sedan ett värde. På detta sätt går det att utifrån en nyckel slå upp ett värde i ett dictionary (därav namnet). En stor finnes med detta system är att nyckeln kan vara liten men värdet stort och/eller komplext, till exempel långa strängar, listor eller andra dictionaries. 
+Till varje nyckel kopplas sedan ett värde. På detta sätt går det att utifrån en nyckel slå upp ett värde i ett dictionary (därav namnet). En stor finnes med detta system är att nyckeln kan vara liten men värdet stort och/eller komplext, till exempel långa strängar, listor eller andra dictionaries.
 
-Dictionaries känneteckans av att de omges av måsvinge-parenteser.  En nyckel sperareras från sitt värde med ett kolon. Varje nyckel/värde-par skiljs åt av kommatecken. 
+Dictionaries känneteckans av att de omges av måsvinge-parenteser.  En nyckel sperareras från sitt värde med ett kolon. Varje nyckel/värde-par skiljs åt av kommatecken.
 
 ### Skapa dictionaries
 
 För att skapa ett nytt dictionary används måsvinge-parenteser.
 
 ```python
->>> a = {}               ## Ett tomt dictionary. 
+>>> a = {}               ## Ett tomt dictionary.
 >>> a
 {}
 >>> b = {'a':'apa'}      ## Ett dictionary med en nyckel 'a' med värde 'apa'.
@@ -850,7 +791,7 @@ Det går att använda heltal, flyttal tecken och strängar som nycklar i ett dic
 >>> d = {'a':'apa', 127:[3,4,5], 1.33333:'A third', 'complex':{1:"a dictionary as value"}}
 ```
 
-Det är inte tillåtet att använda listor som nycklar. 
+Det är inte tillåtet att använda listor som nycklar.
 
 ```python
 >>> d = {'a':'apa', [1,2]:'fel'}
@@ -861,13 +802,13 @@ TypeError: unhashable type: 'list'
 
 ### Lägga till nya nycklar och tillhörande värden
 
-Det går att lägga till nya nycklar till ett dictionary. Om nyckeln redan finns uppdateras endast värdet som är kopplat till nyckeln. 
+Det går att lägga till nya nycklar till ett dictionary. Om nyckeln redan finns uppdateras endast värdet som är kopplat till nyckeln.
 
 ```python
 >>> b = {'a':'apa'}
->>> b['b'] = 'bosse'       ## Lägg till nyckeln 'b' med värde 'bosse'. 
+>>> b['b'] = 'bosse'       ## Lägg till nyckeln 'b' med värde 'bosse'.
 >>> b
-{'a': 'apa', 'b': 'bosse'} 
+{'a': 'apa', 'b': 'bosse'}
 >>> b['a'] = "A new value" ## Uppdatera värdet som är kopplat till nyckeln 'a'.
 >>> b
 {'a': 'A new value', 'b': 'bosse'}
@@ -876,7 +817,7 @@ Det går att lägga till nya nycklar till ett dictionary. Om nyckeln redan finns
 ### Kontrollera om en nyckel finns
 
 För att kolla om en **nyckel** `k` finns i ett **dictionary** `d` kan
-konstruktionen `k in d` användas vilket är ett test som ger **True **om k finns i d och **False** om `k` inte finns i `d`. 
+konstruktionen `k in d` användas vilket är ett test som ger **True **om k finns i d och **False** om `k` inte finns i `d`.
 
 ```python
 >>> d = {'a':'apa', 'b':'bosse'}   ## Skapa ett nytt dictionary.
@@ -896,7 +837,7 @@ Precis som för listor och strängar går det att göra en slinga, fast denna g�
 >>> d = {'a':'apa', 127:[3,4,5], 1.33333:'A third', 'complex':{1:"a dictionary as value"}}
 >>> for key in d:
 ...     print key
-... 
+...
 a
 1.33333
 complex
@@ -906,9 +847,9 @@ complex
 Notera att det till skillnad mot listor och strängar inte finns någon definierad
 ordning på nycklarna i en dictionary. När `d` skapades i exemplet ovan angavs
 nyckeln `127` före nycklarna `1.33333` och `complex`. Trots detta skrevs
-nycklarna ut i en annan ordning. 
+nycklarna ut i en annan ordning.
 
-## Aritmetiska operatorer 
+## Aritmetiska operatorer
 
 | Beräkning  | Operator |   Exempel  | Resultat |
 |------------|----------|------------|-----------
@@ -917,9 +858,9 @@ nycklarna ut i en annan ordning.
 | Multiplikation | `*` | `3.5*2` | `7`|
 | Division | `/` | `6 / 2` | `3` |
 | Modulo (rest vid heltalsdivision) | `%` | `7 % 2` | `1` |
-| Exponent | `**` | `2**3` | `8` | 
+| Exponent | `**` | `2**3` | `8` |
 
-Nedan följer några exempel på aritmetiska uttryck. 
+Nedan följer några exempel på aritmetiska uttryck.
 
 ```python
 >>> 1 + 1
@@ -953,11 +894,11 @@ Nedan följer några exempel på aritmetiska uttryck.
 | Större eller lika med | `>=` | `127 >= 55` | `True` |
 | Minre eller lika med | `<=` | `127 <= 55` | `False` |
 
-Resultatet av en jämförelse, till exempel av två stycken tal är antingen sant eller falskt, dvs antingen `True` eller `False`. 
+Resultatet av en jämförelse, till exempel av två stycken tal är antingen sant eller falskt, dvs antingen `True` eller `False`.
 
 ### ​Lika eller inte lika med
 
-För att kontrollera om två värden är lika med varandra används operator `==` och för att kontrollera om två värden är olika `!=`. 
+För att kontrollera om två värden är lika med varandra används operator `==` och för att kontrollera om två värden är olika `!=`.
 
 ```python
 >>> x = 22   # Tilldelning
@@ -993,7 +934,7 @@ True
 
 ### ​Kombination av jämförelser
 
-Det går att kombinera flera jämförelser. 
+Det går att kombinera flera jämförelser.
 
 ```python
 >>> x = 111
@@ -1029,7 +970,7 @@ I exemplen nedan antas att `a = 10` och `b = 100`.
 ### ​Logiskt och (and)
 
 På samma sätt som i digitaltekniken kan vi kontrollera om ett antal utryck alla
-är `True` samtidigt med hjälp av operatorn `and`. 
+är `True` samtidigt med hjälp av operatorn `and`.
 
 ```python
 >>> True and True
@@ -1126,7 +1067,7 @@ False
 
 ## Utskrift med print
 
-I Pythontolken skrivs resultatet av ett uttryck automatiskt ut på nästa rad. 
+I Pythontolken skrivs resultatet av ett uttryck automatiskt ut på nästa rad.
 
 ```python
 >>> 124 + 3 # Aritmetsikt uttryck
@@ -1138,7 +1079,7 @@ Resultatet `127` skrivs sedan automatiskt ut på nästa rad och slutligen skrivs
 en ny Python-prompt `>>> ` ut.
 
 Om vi vill vara explicita kan vi använda `print` för att tvinga fram en
-utskrift. 
+utskrift.
 
 ```python
 >>> print 124 + 3
@@ -1156,7 +1097,7 @@ svarar Pyton med att skriva ut strängen på nästa rad inom `''`.
 >>>
 ```
 
-Med `print` kan vi skriva ut en sträng utan omslutande `''` 
+Med `print` kan vi skriva ut en sträng utan omslutande `''`
 
 ```python
 >>> print "Hej hopp!"
@@ -1180,7 +1121,7 @@ Bosse
 ```
 
 Genom att efter `print` rada upp värden eller variabler skrivs dessa ut
-separarede med ett mellanslag.  
+separarede med ett mellanslag.
 ```python
 >>> print a, b
 127 Bosse
@@ -1188,13 +1129,145 @@ separarede med ett mellanslag.
 127 Bosse !
 ```
 
+## if-elif-else
+
+För att göra val används **kontrollstrukturen** `if-elif-else`. 
+
+I följande exempel kommer `99` endast att skrivas ut om variablen `x == 99`,
+annars kommer `not 99` att skrivas ut. 
+
+```python 
+if x == 99:
+    print "99"
+else:
+    print "not 99"
+
+```
+
+Villkoret som testas kan vara ett godtyckligt uttryck som kan evalueras till ett
+värde av datatypen **bool**, dvs evalueras till **True** eller **False**. 
+
+I följande exempel nedan kommer `magic number` att skrivas ut om variablen `x ==
+99` eller om `x > 999`, annars kommer `boring number` att skrivas ut. 
+
+```python
+if x == 99 or x > 999:
+    print "magic number"
+else:
+    print "boring number"
+```
+
+Flera villkor kan testas genom att lägga till fall med hjälp av `elif`. De olika
+fallen testas ett och ett uppifrån och ner. I de
+fall flera villkor är sanna samtidigt kommer endast det som testas först att
+utföras. 
+
+```python
+if x == 9:
+    print "9"
+elif x == 99:
+    print "99"
+elif x > 999:
+    print "huge number"
+else:
+    print "boring number"
+```
+
+
+## while
+Slingan (loopen) `while` används för att upprepa något så länge ett villkor är
+uppfyllt. 
+
+I exemplet nedan skrivs värdet på `n` ut och räknas sedan upp med `2` för varje
+varv i slingan så länge `n < 10`.
+
+```python
+>>> n = 0
+>>> while n < 10:
+...     print n
+...     n = n + 2
+...
+...
+0
+2
+4
+6
+8
+>>>
+```
+## for-in
+
+Slingan (loopen) `for-in` används för att i tur och ordning stega igenom alla
+element i en lista eller alla tecken i en sträng. 
+
+I exemplet nedan skrivs alla element i listan `xs` ut på varsin rad. För varje
+varv i slingan tilldelas variablen `x` ett värdet av ett element i lisan `xs`. 
+
+```python
+>>> xs = [1, 'two', 3, 'four']
+>>> for x in xs:
+...     print x
+...
+...
+1
+two
+3
+four
+>>>
+```
+
+Notera att `x` och `xs` endast är godtycklga namn på variabler i exmplet ovan.
+Det går utmärkt att använda andra variabelnamn tillsammans med slingan `for-in`.
+
+```python
+>>> kompisar = ["Eva", "Magnus", "Brasse"]
+>>>
+>>> for kompis in kompisar:
+...     print kompis
+...
+...
+Eva
+Magnus
+Brasse
+>>>
+```
+
+Istället för att lagra listan som slingar löper över i en variabel kan den anges
+direkt. 
+
+```python
+>>> for kompis in ["Eva", "Magnus", "Brasse"]:
+...     print kompis
+...
+...
+Eva
+Magnus
+Brasse
+>>>
+```
+
+Slingan `for-in` kan även användas för att i tur och ordning stega igenom alla
+tecken i en sträng. I exemplet nedan tilldelas variabeln `c` ett tecken i
+strängen `s` för varje varv i slingan.   
+
+```python
+>>> s = "hej"
+>>> for c in s:
+...     print c
+...
+...
+h
+e
+j
+```
+
 ## ​Allmänt om funktioner
 
-En funktion löser ett väl avgränsat problem och gör det möjligt att dela in ett problem i mindre delar som sedan kan sättas samman till en större helhet. 
+En funktion löser ett väl avgränsat problem och gör det möjligt att dela in ett problem i mindre delar som sedan kan sättas samman till en större helhet.
 
 ### ​Likheter mellan funktioner i Python och kapslar i Logisim
 
-Funktioner i Python påminner mycket om kapslar i Logisim (digitalteknik). En kapsel i Logisim tar en eller flera inputs och kan generera ett eller flera outputs. På bilden nedan ser vi hur kretsen equal tar två inputs `a` och `b` och beräknar en output `a == b`. 
+Funktioner i Python påminner mycket om kapslar i Logisim (digitalteknik). En kapsel i Logisim tar en eller flera inputs och kan generera ett eller flera outputs. På bilden nedan ser vi hur kretsen equal tar två inputs `a` och `b` och beräknar en output `a == b`.
 
 ![image alt text](/images/image_0.png)
 
@@ -1212,13 +1285,13 @@ Resultatet en funktion beräknar kallas **retvärde**, man säger att funktionen
 Vi kan betrakta en funktion som en svart låda. Vi kan stoppa in in-data
 (parametrar) i lådan och ut kommer ut-data (resultat), ett returvärde. Den som
 anropar funktionen behöver inte känna till hur lådan ser ut på insidan, dsv inte
-känna till hur returvärdet beräknas. 
+känna till hur returvärdet beräknas.
 {{< /note >}}
 
 ### Söndra och härska
 
 Med hjälp av funktioner kan vi dela in ett problem i mindre delar där varje del
-beräknas med hjälp av en funktion. 
+beräknas med hjälp av en funktion.
 
 
 På bilden nedan ser vi funktionen `max2` med parametrar `a` och `b` och
@@ -1234,7 +1307,7 @@ av funktionen `max2`.
 
 Funktionen `max2` beräknar det största talet av `a` och `b`, detta tal skickas
 sedan vidare som parameter till `max2` tillsammans med `c` för att på så sätt
-beräkna det största talet av `a`, `b` och `c`. 
+beräkna det största talet av `a`, `b` och `c`.
 
 ### ​ Parameter
 
@@ -1242,7 +1315,7 @@ En funktion kan ta noll eller flera namngivna parametrar. Dessa parametrar kan s
 
 ###  Argument
 
-Vid funktionsanrop måste antalet argument överenstämma med antal parametrar. Vid anropet binds parametrarna till argumentens värden. 
+Vid funktionsanrop måste antalet argument överenstämma med antal parametrar. Vid anropet binds parametrarna till argumentens värden.
 
 ###  Returvärde
 
@@ -1258,39 +1331,39 @@ Vi skall åter kika på funktionen `double`.
 
 För att definiera funktionen `double` i Python kan vi inte rita en bild utan vi
 måste använda text. För att definera funktioner i Python används nyckelordet
-`def`, `kolon`, indrag med `tab` och nyckelordet `return`.  
+`def`, `kolon`, indrag med `tab` och nyckelordet `return`.
 
 I Python-tolken kan vi definiera funktionen `double` så här:
 
 ```python
 >>> def double(x):
 ...     return 2*x
-... 
->>> 
+...
+>>>
 ```
 
 Vi skall nu i detalj studera hur det går till att definiera funktionen `double` i
-Python. 
+Python.
 
 ![Definition av funktionen double](/images/def_double.png)
 
 1. När vi definierar en funktion i Python måste vi börja med **nyckelordet** `def`.
-2. Sedan anges namnet på funktionen, i detta fall `double`. 
-3. Inom parenteser namnger vi de parametrar som funktionen beror av separerade av kommatecken, i detta fall den ensamma parametern `n`. 
+2. Sedan anges namnet på funktionen, i detta fall `double`.
+3. Inom parenteser namnger vi de parametrar som funktionen beror av separerade av kommatecken, i detta fall den ensamma parametern `n`.
 4. Med `:` (kolon) anger vi sedan att kommande indragna raderna beskriver vad
-funktionen gör. 
+funktionen gör.
 5. När du trycker på retur-tangenten efter `:` (kolon) ...
 6. ... svarar Python-tolken med tre punter `...` för att visa att definitionen
    av funktionen inte är klar.
-7. Resterande rader måste vara indragna (tryck tab). 
+7. Resterande rader måste vara indragna (tryck tab).
 8. Använder **nyckelordet** `return` för att berätta vilket resultatet av
 funktionen skall vara, i detta fall resultatet av uttrycket `2*n`.
 9. När du trycker på retur-tangenten i slutet på raden ...
 10. ... svarar Python-tolken med tre punter `...` för att visa att definitionen
    av funktionen inte är klar.
 11. När du åter trycker på retur-tangenten visar Python-tolken att definitionen
-    av funktionen är klar genom att ... 
-12. ... skriva ut en ny Python-prompt. 
+    av funktionen är klar genom att ...
+12. ... skriva ut en ny Python-prompt.
 
 
 ## Anrop av funktion
@@ -1314,13 +1387,13 @@ parameter utan måste vara en konstant.
 ```python
 >>> def no_parameters():
 ...     return 127 ## En konstant
-... 
+...
 >>> no_parameters()
 127
 ```
 
 Istället för att explicit ange ett värde för en paramter kan ett uttryck
-användas, till exempel en addition eller ett annat funktionsanrop. 
+användas, till exempel en addition eller ett annat funktionsanrop.
 
 ```python
 >>> doulbe(5+5)
@@ -1343,13 +1416,13 @@ I'm printing!
 ```
 
 I exemplet ovan returnerar funktionen `side_effect_a` inte något värde, istället
-skriver funktionen ut till skärmen. 
+skriver funktionen ut till skärmen.
 
 
 ```python
 >>> def side_effect_b(l, e):
 ...     l.append(e)
-... 
+...
 >>> l = [1, 2, 3]         # Innan funktionsanrop.
 >>> side_effect_b(l, 999)
 >>> l                     # Efter funktionsanrop.
@@ -1360,11 +1433,212 @@ I exemplet ovan utgörs det första argumentet till funktionen
 `side_effect_b()`` av en lista. Funktionen returnerar inte något men har trots
 detta ändrat på listan.
 
+## Moduler
+
+I många fall är det praktiskt att snabbt och enkelt kunna experimentera direkt i
+Python-tolken. I andra fall är det betydligt mer praktiskt att kunna redigera
+och spara kod i en fil med hjälp av en [texteditor][editor].
+
+Kod som sparats i en fil kallas för **modul**. Filnamnet på en modul måste sluta
+med suffixet `.py`.
+
+Antag att följande Python-kod sparats i en **modul** (fil) med namn `test.py`.
+
+```python
+def double(n):
+    return 2*n
+    
+def tripple(n):
+    return 3*n
+```
+
+## Import av modul och dess funktioner
+
+I Linux-terminalen, navigera till den katalog där du sparat modulen `test.py`.
+Starta sedan en Python-tolk. 
+
+Nu kan modulen `test.py` importeras från Python-tolken. 
+
+```python
+>>> import test
+```
+
+### Anrop av funktion från importerad modul
+
+För att anropa en funktion från en importerad modul anges först namnet på
+modulen utan suffixet `.py`, sedan `.` (punkt) och sedan namnet på den funktion
+du vill anropa och funktionens argument inom parenteser. 
+
+```python
+>>> test.double(4)
+8
+>>> test.tripple(3)
+9
+```
+### Import av funktion från modul
+
+För att slippa skriva ut namnet på modulen vid anrop av modulens funktioner kan
+en specifik funktion importeras på följande sätt. 
+
+```python
+>>> from test import double
+>>> double(33)
+66
+```
+
+I exemplet ovan importeras endast funktionen `double` från modulen `test` och
+kan därför anropas enbart med hjälp av sitt namn `double`. 
+
+Om vi försöker anropa funkionen `tripple` på samma sätt får vi ett
+felmeddelande. 
+
+```python
+>>> tripple(7)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'tripple' is not defined
+```
+
+### Import av alla funktioner i en modul
+
+För att direkt importera alla funktioner i en modul kan `*` ([jokertecken][jokertecken],
+engelska wildcard) användas. 
+
+```python
+>>> from test import *
+>>> double(tripple(3))
+18
+```
+
+[editor]:https://www.it.uu.se/education/course/homepage/introdat/ht16/editorer/
+ 
+[jokertecken]:https://sv.wikipedia.org/wiki/Jokertecken
+[cwd]:https://www.it.uu.se/education/course/homepage/introdat/ht16/terminalen/#aktuell-katalog
+
+## Köra modul från terminalen
+
+Antag att följande Python-kod sparats i en **modul** (fil) med namn `test.py`.
+
+```python
+def double(n):
+    return 2*n
+    
+print double(33)
+```
+
+Koden i en modul kan exekveras (köras) direkt från Linux-terminalen. 
+
+```shell
+linux> python test.py
+66
+linux> 
+```
+
+Om samma modul importeras från Python-tolken kommer den avslutande utskriften
+att utföras. 
+
+```python
+>>> import test
+66
+>>>
+```
+
+Variablen `__name__` sätts [automagiskt][automagisk] till `"__main__"` när en modul körs direkt
+från Linux-terminalen. 
+
+[automagisk]:https://sv.wikipedia.org/wiki/Automagisk
+
+Normalt är det inte önskvärt att kod skall exekveras (köras) vid import. För att
+komma tillrätta med detta kan vi ändra modulen `test.py` till:
+
+```python
+def double(n):
+    return 2*n
+
+if __name__ == "__main__":
+    print double(33)
+```
+
+Om vi importerar modulen sker nu inte någon utskrift. 
+
+```python
+>>> import test
+>>>
+```
+
+Men när vi kör modulen direkt från Linux-terminalen utförs utskriften. 
+
+```shell
+linux> python test.py
+66
+linux>
+```
+
+
+
+## Dokumentera funktioner
+
+För att dokumentera vilka parametrar en funktion tar och vad funktionen gör
+använder Python något som kallas för **docstring**. En docstring är en speciell
+sorts kommentar som placeras överest i definitionen av en funtion.
+
+En docstring omges av trippla `"` eller trippla `''`.
+
+```python
+>>> def double(n):
+...     '''Returns the value 2*n.'''
+...     return 2*n
+...
+>>>
+```
+
+I exemplet ovan utgör `'''Returns the value 2*n.'''` funktionen `double`s
+docstring.
+
+Om en funktion har en docstring kan `help` användas i Python-tolken för att läsa
+den.
+
+```python
+>>> help(double)
+```
+
+Nu visas följande.
+
+```python
+Help on function double in module __main__:
+
+double(n)
+    Returns the value 2*n.
+(END)
+```
+
+För att komma tillbaka till Python-prompten måste du trycka på q-tangenten
+(quit).
+
+```python
+>>> help(double)
+
+>>>
+```
+
+En funktions dokumentation (docstring) lagras även i form  av **attributet** `__doc__`. För
+att komma åt attributet `__doc__` anges förs namnet på functionen, sedan `.`
+(punkt) och sedan `__doc__`
+
+```python
+>>> double.__doc__
+'Returns the value 2*n.'
+```
+Läs mer om hur du kan läsa dokumentation i följande avsnitt: 
+
+- [Läsa dokumentation från Linux-terminalen](#läsa-dokumentation-från-linux-terminalen).
+- [Läsa dokumentation i Python-tolken](#läsa-dokumentation-i-python-tolken)
+
 ## Returnera True eller False
 
-I de fall en funktion skall returnera True eller False är det onödigt att använda if-then-else. 
+I de fall en funktion skall returnera True eller False är det onödigt att använda if-then-else.
 
-I exemplet nedan skall funktionen `return_bool(a, b)` returnera `True` om `2*a > b`. 
+I exemplet nedan skall funktionen `return_bool(a, b)` returnera `True` om `2*a > b`.
 
 ```python
 >>> def return_bool(a, b):
@@ -1372,13 +1646,13 @@ I exemplet nedan skall funktionen `return_bool(a, b)` returnera `True` om `2*a >
 ...        return True
 ...     else:
 ...        return False
-... 
+...
 >>> return_bool(3, 5)
 True
 >>> return_bool(3, 7)
 False
 ```
-Detta går dock att skriva om utan if-then-else. För att förstå varför kikar vi endast på jämförelsen `2*a > b`. 
+Detta går dock att skriva om utan if-then-else. För att förstå varför kikar vi endast på jämförelsen `2*a > b`.
 
 ```python
 >>> a = 3
@@ -1389,12 +1663,12 @@ Detta går dock att skriva om utan if-then-else. För att förstå varför kikar
 True
 ```
 
-Som framgår ovan ger uttrycket `2*a > b`i sig självt värdet `True` eller `False`. Vi kan därför skriva om samma funktion på följande sätt. 
+Som framgår ovan ger uttrycket `2*a > b`i sig självt värdet `True` eller `False`. Vi kan därför skriva om samma funktion på följande sätt.
 
 ```python
 >>> def return_bool(a, b):
 ...     return 2*a > b
-... 
+...
 >>> return_bool(3, 5)
 True
 >>> return_bool(3, 7)
@@ -1403,10 +1677,10 @@ False
 
 ### Return och uttryck som inte har något värde
 
-I Python har inte alla uttryck något värde. 
+I Python har inte alla uttryck något värde.
 
 ```python
->>> 2*3            # Har värde och detta värde skrivs ut på nästa rad. 
+>>> 2*3            # Har värde och detta värde skrivs ut på nästa rad.
 6
 >>> x = 77         # Resultatet av denna tilldelning saknar värde och inget
                    # skrivs ut på nästa rad.
@@ -1415,7 +1689,7 @@ I Python har inte alla uttryck något värde.
 
 Vad händer om vi försöker returnera ett uttryck som saknar värde?
 
-```
+```python
 >>> def error(l):
 ...     return x = 999
   File "<stdin>", line 2
@@ -1423,6 +1697,102 @@ Vad händer om vi försöker returnera ett uttryck som saknar värde?
              ^
 SyntaxError: invalid syntax
 ```
+
+## Läsa dokumentation från Linux-terminalen 
+
+Du behöver inte söka på internet för att hitta och läsa dokumentation om 
+moduler. 
+
+Från Linux-terminalen läser du dokumentation för en modul med hjälp av `pydoc`.
+För att läsa dokumentation om modulen `math` skriver du `pydoc math`.
+
+```shell
+linux> pydoc math
+```
+
+### Navigera och söka i dokumentationen 
+
+Nu startar Pythons inbyggda system för att läsa dokumentation. Kommandon för att
+att navigera, söka och avsluta återfinns i tabellen nedan. 
+
+| Åtgärd                       | Tangent-kombination(er) |
+| ---------------------------- | ------------------- |
+| Bläddra en sidan nedåt       | `mellanslag`, `page-down`, `f`, `ctrl-f`, `ctrl-v`  |
+| Bläddra en sida uppåt        | `b`, `ctrl-b`, `esc-v` |
+| Bläddra en halv sida nedåt   | `d`, `ctrl-d` |
+| Bläddra en halv sida uppåt   | `u`, `ctrl-u` | 
+| Bläddra till början          | `g` |
+| Bläddra till slutet          | `G` | 
+| Sök text (frammåt)           | `/` |
+| Sök text (bakåt)             |  `?` |
+| Nästa träff vid sökning      | `n` |
+| Föregående träff vid sökning | `N` |
+| Avsluta                      | `q` |
+
+För att bläddra till slutet av hjälpavsnittet om modulen `math` trycker du `G`.
+Du bör nu se följande längst ner i terminalen. 
+
+```python
+DATA
+    e = 2.718281828459045
+    pi = 3.141592653589793
+```
+
+Vi ser här att konstanterna `e` och `pi` finns definierade i modulen `math`. 
+
+För att bläddra tillbaka till början trycker du `g`. 
+
+För att söka efter `pow` trycker du först på `/`, skiver in `pow` och trycker
+`enter`.
+
+Överst i terminalen bör du nu se följande rad i hjälpavsnittet om modulen 
+`math`, 
+
+```python
+        Return e raised to the power of x.
+```
+
+, där `pow` i ordet `power` är markerat. 
+
+För att bläddra till nästa sök-träff, tryck `n`. Du bör nu se följande överst i
+terminalen. 
+
+```python
+    pow(...)
+        pow(x, y)
+
+        Return x**y (x to the power of y).
+```
+
+Vi ser här att modulen `math` definierar funktionen `pow(x, y)` som returnerar
+x<sup>y</sup>.
+
+Fortssätt experimentera på egen hand för att lära dig hur du navigerar och söker
+i dokumentationen. 
+
+För att avsluta och komma tillbaka till prompten i Linux-terminalen, tryck `q`.
+
+## Läsa dokumentation i Python-tolken
+
+På liknande sätt som du
+kan
+[läsa dokumentation från Linux-terminalen](#läsa-dokumentation-från-linux-terminalen) kan
+du läsa dokumentation direkt i Python-tolken.
+
+För att läsa dokumentation om en modul måste den först vara importerad. 
+
+```python`
+>>> import math
+```
+
+För att läsa dokumentation i Python-tolken använder du kommandot `help`. 
+
+```python
+>>> help(math)
+```
+Nu startar Pythons inbyggda system för att läsa dokumentation. På samma sätt som
+när du läser dokumentation från Linux-terminalen kan du
+nu [navigera och söka i dokumentationen](#navigera-och-söka-i-dokumentationen). 
 
 ## Nyttiga moduler
 
@@ -1483,9 +1853,9 @@ För mer information, se [Python-dokumentationen](http://docs.python.org/2/libra
 
 ## Klasser och Objekt
 
-En klass definierar hur ett objekt ska se ut och bete sig. Du kan tänka på klassen som en ritning och ett objekt som något som konstrueras utifrån denna ritning. 
+En klass definierar hur ett objekt ska se ut och bete sig. Du kan tänka på klassen som en ritning och ett objekt som något som konstrueras utifrån denna ritning.
 
-Varje objekt som skapas måste vara en instans av en klass. För att skapa ett objekt måste vi alltså först skapa en klass och sedan instansiera ett objekt utifrån den klassen. Det går att skapa flera objekt utifrån en och samma klass på samma sätt som vi kan bygga flera olika bilar utifrån en och samma ritning. 
+Varje objekt som skapas måste vara en instans av en klass. För att skapa ett objekt måste vi alltså först skapa en klass och sedan instansiera ett objekt utifrån den klassen. Det går att skapa flera objekt utifrån en och samma klass på samma sätt som vi kan bygga flera olika bilar utifrån en och samma ritning.
 
 Ett kännetecken för objekt är att de binder samman data som lagras i objektet med ett antal operationer som får tillgång till detta data.
 
@@ -1527,7 +1897,7 @@ Låt oss skapa en enkel klass som kommer ihåg namn och ålder på en person.
 ...             print("This Person is " + self.name +
 ...			 " and is " + str(self.age) + " years old")
 ...
->>> 
+>>>
 ```
 
 ### Instansiera objekt
@@ -1554,7 +1924,7 @@ Det går också att skapa hur många metoder som helst. Man lägger helt enkel t
 
 ```python
 class Person:
-	
+
     def canVote(self):
 		return self.age >= 18
 
@@ -1572,7 +1942,7 @@ class Counter:
     '''
     A small class implementing a counter. The counter will
     generate the following sequence counting 0, 1, 2, ...,
-    limit, 0, 1, 2, ... etc. 
+    limit, 0, 1, 2, ... etc.
     '''
 
     def __init__(self, limit):
@@ -1590,10 +1960,10 @@ class Counter:
         self.limit = limit
 
         ## The first time next() is called, the counter wraps
-        ## around and start from 0. 
-        
-        self.value = limit 
-        
+        ## around and start from 0.
+
+        self.value = limit
+
 
     def next(self):
         '''
@@ -1603,14 +1973,14 @@ class Counter:
 
         ## Use modulo (%) to wrap around from zero when
 
-        ## limit is reached. 
+        ## limit is reached.
 
         self.value = (self.value + 1) % (self.limit + 1)
 
         return self.value
 ```
 
-För att skapa ett objekt av klassen `Counter` anropar vi konstruktorn `Counter()` som i sin tur kör koden i metoden `__init__()`.  I konstruktorn sparar vi värdet på `limit` i objektvariabeln `self.limit`. Vi behöver även ett startvärde på räknaren vilket vi lagarar i objektvariabeln `self.value`. Notera även att startvärdet på `self.value` sätts till `limit`. 
+För att skapa ett objekt av klassen `Counter` anropar vi konstruktorn `Counter()` som i sin tur kör koden i metoden `__init__()`.  I konstruktorn sparar vi värdet på `limit` i objektvariabeln `self.limit`. Vi behöver även ett startvärde på räknaren vilket vi lagarar i objektvariabeln `self.value`. Notera även att startvärdet på `self.value` sätts till `limit`.
 
 I metoden `next()` räknar vi ut, sparar och returnerar nästa värde i sekvensen.
 Första gången `next()` anropas sätts `self.value` till `(limit + 1) % (limit +
@@ -1619,17 +1989,17 @@ på `self.value` till `limit` i konstruktorn. Nästa gång `next()` anropas får
 `(0+1) % (limit + 1)` vilket för `limit  > 0` blir `1`. Om `next()` anropas igen
 får vi `(1+1) % (limit + 1)` vilket för `limit  > 1` blir `2`. För varje gång `next()` anropas kommer räknaren att öka med ett och när vi når `limit + 1` börjar sekvensen om från `0`.
 
-Vi kan nu testa att skapa två objekt från klassen `Counter`, ett med `limit 6` och ett med `limit 10`. 
+Vi kan nu testa att skapa två objekt från klassen `Counter`, ett med `limit 6` och ett med `limit 10`.
 
 ```python
 def main():
 
     ## Create two counters.
 
-    c6  = Counter(6)  
+    c6  = Counter(6)
     c10 = Counter(10)
 
-    # Create two lists 
+    # Create two lists
     l6 = []
     l10 = []
 

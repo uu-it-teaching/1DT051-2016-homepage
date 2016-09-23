@@ -38,6 +38,11 @@ h1, h2, h3 {
     font-size: 2em;
 }
 
+.article h3 {
+    font-size: 1.3em;
+}
+
+
 .article ul>li:before {
     content: none;
     display: none;
@@ -63,11 +68,11 @@ h1, h2, h3 {
     color: #ef8076;
 } 
 
-.article .warning a:hover { 
+.article .warning a:hover, .article .note a:hover { 
     color: #cccc00;
 }
 
-.article .warning a {
+.article .warning a, .article .note a {
     color: yellow;
 }
 
@@ -79,13 +84,28 @@ h1, h2, h3 {
     color: black;
 }
 .article pre, .article div.admonition  {
-    margin: 18px 0px;
+    margin: 21px 0px;
     padding: 8px 12px;
     border-radius: 4px;
 }
 .article div.admonition {
     margin-top: 2em;
 }
+
+.article div.note {
+    background: #2961f6;
+}
+
+.article div.note code {
+    background-color: #293ff6;
+    color: white;
+}
+
+.article div.warning code {
+    background-color: #e53929;
+    color: white;
+}
+
 .article code {
     font-family: Consolas, "Courier New", monospace;
     // font-size: 1.1em;
@@ -93,8 +113,11 @@ h1, h2, h3 {
     border: 0px solid #ddd;
     border-radius: 4px;
     background-color: #ddd;
-    padding-top: 3px;
-    padding-bottom: 2px;
+}
+
+.article p > code , .article table code {
+    padding-top: 4px;
+    padding-bottom: 3px;
     padding-left: 3px;
     padding-right: 3px;
 }
@@ -102,8 +125,13 @@ h1, h2, h3 {
 
 .article pre code {
     background: none;
+    padding: 0px;
+    background-color: #ddd;
 }
 
+.article pre {
+ background-color: #ddd; 
+}
 
 table.grading td, table.grading th {
     text-align: center;
