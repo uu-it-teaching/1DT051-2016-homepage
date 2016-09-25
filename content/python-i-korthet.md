@@ -342,7 +342,7 @@ En tuple består av två eller fler komma-separerade element omslutna av `(` och
 ```
 
 Det första elementet har **index** 0, det andra elementet **index** 1 osv. Med
-hjälp av index inom hak-parenteser `[ ]` får värdet på ett element i en tuple.
+hjälp av index inom hak-parenteser `[ ]` fås värdet på ett element i en tuple.
 
 ```python
 >>> (11, "Bosse")[0]
@@ -718,7 +718,7 @@ Ett exempel på sträng-interpolation.
      1   2 3
 ```
 
-Efter strängen `"x = %i"` följer `%` och sedan talet 127.
+Efter strängen `"x = %i"` följer `%` och sedan talet `127`.
 
 I strängen `"x= %i"` utgör `%i` (1) en markör som kommer ersättas med
 sträng-representationen av (3) **tolkat** som heltal (**int**). Strängen och
@@ -741,7 +741,7 @@ Det finns andra markörer än `%i`, till exempel `%f` som konverterar (3) till e
 >>>
 ```
 
-Markören `%s` används för att byta ut en markör mot en **stäng**.
+Markören `%s` används för att byta ut en markör mot en **sträng**.
 
 ```python
 >>> y = "hej"
@@ -1201,7 +1201,7 @@ Slingan (loopen) `for-in` används för att i tur och ordning stega igenom alla
 element i en lista eller alla tecken i en sträng. 
 
 I exemplet nedan skrivs alla element i listan `xs` ut på varsin rad. För varje
-varv i slingan tilldelas variablen `x` ett värdet av ett element i lisan `xs`. 
+varv i slingan tilldelas variablen `x` värdet av ett element i lisan `xs`. 
 
 ```python
 >>> xs = [1, 'two', 3, 'four']
@@ -1335,7 +1335,7 @@ måste använda text. För att definera funktioner i Python används nyckelordet
 
 I Python-tolken kan vi definiera funktionen `double` så här:
 
-```python
+```Python
 >>> def double(x):
 ...     return 2*x
 ...
@@ -1369,14 +1369,32 @@ funktionen skall vara, i detta fall resultatet av uttrycket `2*n`.
 ## Anrop av funktion
 
 För att anropa en funktion skriver vi namnet på funktionen följt av argument
-till funktionen inom parenteser. Värdet av funktionsanropet blir det värde som
-funktionen returnerar.
+till funktionen inom parenteser `(` och `)`. Om funktionen tar mer än ett
+argument separeras dessa med `,` (komma). Värdet av funktionsanropet blir det
+värde som funktionen returnerar.
+
+Antag att följande funktioner har definierats. 
+
+```Python
+>>> def double(n):
+...     return 2*n
+...
+>>> def dsum(x, y):
+...     return double(x+y)
+...
+>>>
+```
+
+Nu kan fuktionenera `double` och `dsum` anropas på följande sätt. 
 
 ```python
 >>> double(7)
 14
 >>> double(7.5)
 15.0
+>>> dsum(2, 5)
+14
+>>>
 ```
 
 ## Mer om funktioner
@@ -1403,14 +1421,14 @@ double(double(3))
 ```
 
 För funktioner som inte returnerar något
-värde är yftet istället att orsaka någon sidoeffekt, till exempel skriva ut
+värde är syftet istället att orsaka någon sidoeffekt, till exempel skriva ut
 något på skärmen men `print` eller ändra på något av argumentet.
 
 ```python
->>> def side_effect():
+>>> def side_effect_a():
 ...     print "I'm printing!"
 ...
->>> side_effect()
+>>> side_effect_a()
 I'm printing!
 >>>
 ```
@@ -1430,7 +1448,7 @@ skriver funktionen ut till skärmen.
 ```
 
 I exemplet ovan utgörs det första argumentet till funktionen
-`side_effect_b()`` av en lista. Funktionen returnerar inte något men har trots
+`side_effect_b()` av en lista. Funktionen returnerar inte något men har trots
 detta ändrat på listan.
 
 ## Moduler
@@ -1442,17 +1460,18 @@ och spara kod i en fil med hjälp av en [texteditor][editor].
 Kod som sparats i en fil kallas för **modul**. Filnamnet på en modul måste sluta
 med suffixet `.py`.
 
+## Import av modul och dess funktioner
+
 Antag att följande Python-kod sparats i en **modul** (fil) med namn `test.py`.
 
 ```python
 def double(n):
     return 2*n
     
-def tripple(n):
-    return 3*n
+def dsum(x, y):
+    return double(x+y)
 ```
 
-## Import av modul och dess funktioner
 
 I Linux-terminalen, navigera till den katalog där du sparat modulen `test.py`.
 Starta sedan en Python-tolk. 
@@ -1466,14 +1485,15 @@ Nu kan modulen `test.py` importeras från Python-tolken.
 ### Anrop av funktion från importerad modul
 
 För att anropa en funktion från en importerad modul anges först namnet på
-modulen utan suffixet `.py`, sedan `.` (punkt) och sedan namnet på den funktion
-du vill anropa och funktionens argument inom parenteser. 
+modulen utan suffixet `.py`, sedan `.` (punkt), namnet på den funktion
+du vill anropa och avslutningsvis funktionens argument separarerade med `,`
+(komma) inom parenteser `(` och `)`. 
 
 ```python
 >>> test.double(4)
 8
->>> test.tripple(3)
-9
+>>> test.dsum(3, 4)
+14
 ```
 ### Import av funktion från modul
 
@@ -1489,14 +1509,14 @@ en specifik funktion importeras på följande sätt.
 I exemplet ovan importeras endast funktionen `double` från modulen `test` och
 kan därför anropas enbart med hjälp av sitt namn `double`. 
 
-Om vi försöker anropa funkionen `tripple` på samma sätt får vi ett
+Om vi försöker anropa funkionen `dsum` på samma sätt får vi ett
 felmeddelande. 
 
 ```python
->>> tripple(7)
+>>> dsum(3, 4)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-NameError: name 'tripple' is not defined
+NameError: name 'dsum' is not defined
 ```
 
 ### Import av alla funktioner i en modul
@@ -1506,8 +1526,8 @@ engelska wildcard) användas.
 
 ```python
 >>> from test import *
->>> double(tripple(3))
-18
+>>> double(dsum(3, 4))
+28
 ```
 
 [editor]:https://www.it.uu.se/education/course/homepage/introdat/ht16/editorer/

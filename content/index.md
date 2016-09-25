@@ -114,8 +114,8 @@ inte båda kan visa att de förstår och kan förklara parets lösning.
 
 [0]: https://studentportalen.uu.se/portal/portal/uusp/student/student-course?entityId=141825
 
-[1]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_programming_part_1_background.pdf 
+[1]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_1_background.pdf 
 
-[2]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_bin_hex_numbers_lecture.pdf
+[2]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_bin_hex_numbers_lecture.pdf
 
  

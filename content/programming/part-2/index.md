@@ -50,6 +50,15 @@ i korthet:
 - [Import av modul och dess funktioner](/python-i-korthet/#import-av-modul-och-dess-funktioner)
 - [Köra modul från terminalen](/python-i-korthet/#köra-modul-från-terminalen)
 
+## Arbete och redovisning i par om två studenter
+
+Arbete och redovisning sker i par om två studenter. Vilket par du tillhör
+framgår på flikarna **Del 2 (par - namn)** och **Del 2(namn - par)** på denna
+sida med [par för del 2 och del 3][pairs]. 
+
+
+[pairs]:https://docs.google.com/spreadsheets/d/16sCWDDmYSWo8uxni8rnyzLQ0rGzK3LkN75B074qL1xI/pubhtml# 
+
 ## Obligatoriska uppgifter
 
 Till programmering del 2 hör ett antal [obligatoriska uppgifer](assignment). 

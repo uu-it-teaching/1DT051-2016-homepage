@@ -44,7 +44,7 @@ framgår på kursens sida i **Studentportalen** > **Gruppindelningar** >
 Innan du börjar med del 1 skall du:
 
 - översiktligt läsa igenom denna
-[bakgrund][1] som
+[bakgrund][part-1-background] som
 tar upp hur olika tekniker såsom reläer, vakumrör och tranistorer kan användas
 för att konsturera
 digitala [grindar](https://sv.wikipedia.org/wiki/Logisk_grind) samt hur dessa
@@ -53,7 +53,7 @@ kan användas för att konstruera datorer
 - repeterat dina kunskaper om binära och hexadecimala tal, till exempel genom
   att läsa igenom materialet från
   denna
-  [föreläsning][2].
+  [föreläsning][lecture-bin-hex].
   
 Den som vill förbereda sig inför uppgifterna om programmering bör gå på kursens
 workshops. Det finns också väldigt mycket bra material online om Python och hur
@@ -69,7 +69,7 @@ man programmerar i Python, t.ex.:
 
 Under en workshop kommer ni att bekanta er med Python och [Pyton Tutor](http://www.pythontutor.com/). 
 
-- [Material][3] (slides) som tas upp under denna workshop.
+- [Material][part-1-workshop] (slides) som tas upp under denna workshop.
 
 Exempel i Python Tutor som används under workshopen:
 
@@ -80,9 +80,9 @@ Exempel i Python Tutor som används under workshopen:
 
 Till Programmering del 1 hör ett antal [obligatoriska uppgifter](assignment). 
 
+[lecture-bin-hex]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_bin_hex_numbers_lecture.pdf 
 
-[1]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_programming_part_1_background.pdf 
+[part-1-background]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_1_background.pdf
 
-[2]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_bin_hex_numbers_lecture.pdf
+[part-1-workshop]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_1_workshop.pdf
 
-[3]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/problem_solving/python/part_1/1DT051_2016_programming_part_1_workshop.pdf

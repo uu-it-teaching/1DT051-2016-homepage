@@ -9,6 +9,10 @@ canonifyurls = true
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
 
+PygmentsCodeFences = false
+PygmentsStyle = "default"
+
+
 [params]
 	# General information
 	author = "Karl Marklund"
@@ -138,6 +142,12 @@ googleAnalytics = ""
   parent = "Del 2"
   url = "programming/part-2/optional/"
   weight = 34
+
+[[menu.main]]
+  name = "Handledning"
+  parent = "Del 2"
+  url = "programming/part-2/tutoring/"
+  weight = 35
 
 [[menu.main]]
   name = "Redovisning"
