@@ -26,7 +26,7 @@ redovisa. Om tiden inte passar kan ni byta med ett annat par, men detta får ni
 organisera själva.
 
 Examinerande lärare: Mehdi Alipour (MA), Moncef Mechri (MM), Magnus Norgren (MN),
-Johan Snider (JS) och KM=Karl Marklund (KM))
+Johan Snider (JS) och Karl Marklund (KM). 
 
 
 <table class="html-table grading">
@@ -157,7 +157,7 @@ Johan Snider (JS) och KM=Karl Marklund (KM))
 
 			<p>P1549</p>
 			</td>
-			<td>8:15 - 8:30</td>
+			<td>15:15 - 15:30</td>
 			<td>B7-I</td>
 			<td>B7-II</td>
 			<td> </td>
@@ -165,7 +165,7 @@ Johan Snider (JS) och KM=Karl Marklund (KM))
 			<td> </td>
 		</tr>
 		<tr>
-			<td>8:30 - 8:45</td>
+			<td>15:30 - 15:45</td>
 			<td>B6-I</td>
 			<td>B6-II</td>
 			<td> </td>
@@ -173,7 +173,7 @@ Johan Snider (JS) och KM=Karl Marklund (KM))
 			<td> </td>
 		</tr>
 		<tr>
-			<td>8:45 - 9:00</td>
+			<td>15:45 - 16:00</td>
 			<td>A5-I</td>
 			<td>A5-II</td>
 			<td> </td>
@@ -181,7 +181,7 @@ Johan Snider (JS) och KM=Karl Marklund (KM))
 			<td> </td>
 		</tr>
 		<tr>
-			<td>9:00 - 9:15</td>
+			<td>16:00 - 16:15</td>
 			<td>A4-I</td>
 			<td>A4-II</td>
 			<td> </td>
@@ -189,7 +189,7 @@ Johan Snider (JS) och KM=Karl Marklund (KM))
 			<td> </td>
 		</tr>
 		<tr>
-			<td>9:15 - 9:30</td>
+			<td>16:15 - 16:30</td>
 			<td>A3-I</td>
 			<td>A3-II</td>
 			<td> </td>
@@ -197,7 +197,7 @@ Johan Snider (JS) och KM=Karl Marklund (KM))
 			<td> </td>
 		</tr>
 		<tr>
-			<td>9:30 - 9:45</td>
+			<td>16:30 - 16:45</td>
 			<td>A2-I</td>
 			<td>A2-II</td>
 			<td> </td>
@@ -205,7 +205,7 @@ Johan Snider (JS) och KM=Karl Marklund (KM))
 			<td> </td>
 		</tr>
 		<tr>
-			<td>9:45 - 10:00</td>
+			<td>16:45 - 17:00</td>
 			<td>A1-I</td>
 			<td>A1-II</td>
 			<td> </td>

@@ -1,5 +1,5 @@
 ---
-title: Frivillig fördjupning
+title: Del 2 - Frivillig fördjupning
 ---
 
 {{< note title="Ej obligatorisk fördjupning">}} 
