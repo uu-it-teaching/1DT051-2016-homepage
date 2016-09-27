@@ -305,7 +305,7 @@ För att komma tillbaka till Linux-prompten i terminalen, tryck **q**.
 Upprepa proceduern **ändra-spara-testa** tills testerna för funktionen `is_odd`
 ger korrekt resultat. 
 
-## is_even, ..., lengths
+## is_even ... lengths
 
 Upprepa proceduren **ändra-spara-testa** för resterande funktioner i modulen
 `mandatory.py`
