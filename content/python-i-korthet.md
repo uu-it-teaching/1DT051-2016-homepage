@@ -153,10 +153,60 @@ Du kan dock ha ett eller flera blanktecken mellan en operand och en operator.
 3
 ```
 
+
+## Reserverade ord (keywords)
+
+Python består av ett antal reserverade ord (keywords) med särskild betydelse.
+Dessa ord utgör språkets grundläggande **ordförråd**[^kth-python-DD1314]. Pythons
+reserverade ord kan inte användas som [identifierare](#identifierare)
+och de måste stavas exakt som nedan och skrivas med
+enbart [gemener](https://sv.wikipedia.org/wiki/Gemen), dvs skrivas med enbart
+små bokstäver.
+
+
+```python
+and       del       from      not       while
+as        elif      global    or        with
+assert    else      if        pass      yield
+break     except    import    print
+class     exec      in        raise
+continue  finally   is        return
+def       for       lambda    try
+```
+
+
+[^kth-python-DD1314]:http://www.csc.kth.se/utbildning/kth/kurser/DD1310/prgo08/F/F02.pdf
+
+
+## Identifierare 
+
+Ord som du själv inför i din kod kallas för identifierare[^kth-python-DD1314].
+Följande regler gäller för identifierare: 
+
+- Kan bestå av bokstäverna `a...z` och `A...Z`, siffrorna
+  `0...9` och understreck (underscore) `_`.
+- Får inte börja med en siffra.
+- Python skiljer på versaler och gemener, till exempel är `bosse` och `Bosse`
+inte samma identifierare. 
+
+Exempel på giltiga identifierare: 
+
+```python
+a
+A
+apa
+Apa
+nisse33
+Bosse77
+apan_bosse
+_apa
+```
+
 ## Variabler
 
 En variabel är något som kan ändras. En variabel är ett sätt att komma ihåg ett
-värde genom att på en namngiven plats lagra detta värde.
+värde genom att på en namngiven plats lagra detta värde. Namnet du inför för att
+lagra värdet måste vara en giltigt [identifierare](#identifierare). 
 
 För att lagra ett värde i en variabel används operatorn `=`.
 
@@ -165,7 +215,7 @@ För att lagra ett värde i en variabel används operatorn `=`.
 >>> a = 127
 ```
 
-Talet `127` har nu lagrats i variablen `a`. Variabeln `a` kan nu användas i
+Talet `127` har nu lagrats i variablen med namn `a`. Variabeln `a` kan nu användas i
 beräkningar.
 
 ```python
@@ -351,7 +401,7 @@ hjälp av index inom hak-parenteser `[ ]` fås värdet på ett element i en tupl
 'Bosse'
 ```
 
-Index kan även användas när en tuple lagrats i en **variabel**.
+    Index kan även användas när en tuple lagrats i en **variabel**.
 
 ```python
 >>> t = (1, "hej", 127.5)
@@ -1330,8 +1380,9 @@ Vi skall åter kika på funktionen `double`.
 ## Definition av funktion
 
 För att definiera funktionen `double` i Python kan vi inte rita en bild utan vi
-måste använda text. För att definera funktioner i Python används nyckelordet
-`def`, `kolon`, indrag med `tab` och nyckelordet `return`.
+måste använda text. För att definera funktioner i Python används [nyckelordet](#reserverade-ord-keywords)
+`def`, `kolon`, indrag med `tab` och [nyckelordet](#reserverade-ord-keywords)
+`return`. Namnet på en funktion måste vara en en giltigt [identifierare](#identifierare). 
 
 I Python-tolken kan vi definiera funktionen `double` så här:
 
@@ -1342,6 +1393,8 @@ I Python-tolken kan vi definiera funktionen `double` så här:
 >>>
 ```
 
+
+ 
 Vi skall nu i detalj studera hur det går till att definiera funktionen `double` i
 Python.
 
