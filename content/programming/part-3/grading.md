@@ -1,11 +1,11 @@
 ---
-title: Del 2 - Redovisning
+title: Del 3 - Redovisning
 ---
 
 ## 15 minuters redovisning per par
 
 Redovisning sker i par om två studenter. Vilket par du tillhör
-framgår på flikarna **Del 2 (par - namn)** och **Del 2 (namn - par)** på denna
+framgår på flikarna **Del 3 (par - namn)** och **Del 3 (namn - par)** på denna
 sida med [par för del 2 och del 3][pairs]. 
 
 [pairs]:https://docs.google.com/spreadsheets/d/16sCWDDmYSWo8uxni8rnyzLQ0rGzK3LkN75B074qL1xI/pubhtml# 
@@ -34,7 +34,7 @@ Varje basgrupp innehåller upp till fyra par. Vi kallar dem t.ex. B07-X, D20-W,
 eller C13-Y. På länken nedan hittar du tiden då ditt par ska redovisa. Om tiden
 inte passar kan ni byta med ett annat par, men detta får ni organisera själva.
 
-- [Schema för redovisning av uppgiften programmering del 2](https://docs.google.com/spreadsheets/d/13rxY8TQHli81b5AoHiLpq2QBci5X9QyjQEOJlhlb6HA/pubhtml)
+- [Schema för redovisning av uppgiften programmering del 3](https://docs.google.com/spreadsheets/d/1Xf0QuZ7Tz59FeIolqH0bZPEunc4zDnY5m8HxwQFS1e0/pubhtml)
 
 {{< warning title="Kom i god tid" >}}
 
