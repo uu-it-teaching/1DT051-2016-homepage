@@ -99,9 +99,9 @@ Under detta möte skall paret:
     * Arbeta med papper och penna. 
     * Rita figurer.
 -  fundera kring representation, dvs hur “saker” i programmet kan representeras:
-     * Listor?
-     * Tupler?
-     * Dictionaries?
+     * [Tupler](/python-i-korthet/#tupler)?
+     * [Listor](/python-i-korthet/#listor)?
+     * [Dictionaries](/python-i-korthet/#uppslagsbok-dictionary-överkurs)?
      * Något annat?
 - ha gjort ett utkast till en kortfattad tidsplanering.
 
