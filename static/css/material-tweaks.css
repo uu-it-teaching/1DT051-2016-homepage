@@ -152,3 +152,21 @@ table.html-table td.grading-day {
     vertical-align: middle;
     text-align: center;
 }
+
+table.python-class td.class {
+    background: #e53929;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+table.python-class td.attributes {
+    background: #a4c2f4;
+    font-weight: bold;
+}
+
+table.python-class td.methods {
+    background: #fff2cc;
+    font-weight: bold;
+}
