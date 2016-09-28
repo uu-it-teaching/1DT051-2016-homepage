@@ -140,18 +140,21 @@ PygmentsStyle = "default"
 [[menu.main]]
   name = "Frivillig fördjupning"
   parent = "Del 2"
+  identifier = "part-2-optional"
   url = "programming/part-2/optional/"
   weight = 34
 
 [[menu.main]]
   name = "Handledning"
   parent = "Del 2"
+  identifier = "part-2-tutoring"
   url = "programming/part-2/tutoring/"
   weight = 35
 
 [[menu.main]]
   name = "Redovisning"
   parent = "Del 2"
+  identifier = "part-2-grading"
   url = "programming/part-2/grading/"
   weight = 35
 
@@ -178,6 +181,7 @@ PygmentsStyle = "default"
 [[menu.main]]
   name = "Redovisning"
   parent = "Del 3"
+  identifier = "part-3-grading"
   url = "programming/part-3/grading/"
   weight = 43
 
