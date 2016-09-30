@@ -160,6 +160,10 @@ table.python-class td.class {
 }
 
 
+table.python-class td {
+    border: 2px solid #707070; 
+    padding: 0.5em 0.5em;
+}
 
 table.python-class td.attributes {
     background: #a4c2f4;
@@ -167,6 +171,15 @@ table.python-class td.attributes {
 }
 
 table.python-class td.methods {
-    background: #fff2cc;
+    // background: #fff2cc;
+   background: #a4c2f4;
     font-weight: bold;
+}
+
+div.side-by-side {
+    text-align: center;
+}
+
+div.side-by-side img {
+    display: inline;
 }

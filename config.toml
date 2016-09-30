@@ -77,10 +77,16 @@ PygmentsStyle = "default"
   weight = 12
 
 [[menu.main]]
+  name = "Python Idle"
+  parent = "Start"
+  url = "idle/"
+  weight = 13
+
+[[menu.main]]
   name = "Övriga resurser"
   parent = "Start"
   url = "resources/"
-  weight = 13
+  weight = 14
 
 #### Part 1
 
@@ -173,37 +179,52 @@ PygmentsStyle = "default"
 
 
 [[menu.main]]
-  name = "Klass och objekt" 
+  name = "Objekt och klass" 
   parent = "Del 3"
   url = "programming/part-3/objects/"
   weight = 42
 
 [[menu.main]]
+  name = "Hämta filer med Git"
+  identifier = "part-3-files"
+  parent = "Del 3"
+  url = "programming/part-3/files/"
+  weight = 43
+
+[[menu.main]]
   name = "Grafik" 
   parent = "Del 3"
   url = "programming/part-3/graphics/"
-  weight = 43
+  weight = 44
 
 [[menu.main]]
   name = "Uppgifter"
   identifier = "part-3-assignment"
   parent = "Del 3"
   url    = "programming/part-3/assignment/"
-  weight = 44
+  weight = 45
 
 [[menu.main]]
   name = "Frivillig fördjupning"
   identifier = "part-3-optional"
   parent = "Del 3"
   url = "programming/part-3/optional/"
-  weight = 45
+  weight = 46
+
+[[menu.main]]
+  name = "Handledning"
+  parent = "Del 3"
+  identifier = "part-3-tutoring"
+  url = "programming/part-2/tutoring/"
+  weight = 47
+
 
 [[menu.main]]
   name = "Redovisning"
   parent = "Del 3"
   identifier = "part-3-grading"
   url = "programming/part-3/grading/"
-  weight = 46
+  weight = 48
 
 
 #### Projekt

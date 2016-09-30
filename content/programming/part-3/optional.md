@@ -2,12 +2,16 @@
 title: Del 3 - Frivillig fördjupning
 ---
 
+Om du vill kan du nu på egen hand fortsätta att på egen hand lära dig mer
+om objekt och grafik i Python genom att lägga till ny funktionalitet till
+programmet `assignment.py`
+
 Har du inga egna förslag finns det några stycken du kan utgå ifrån nedan.
 
 ## Lär dig hantera slumpen
 
-I modulen `random` som följer med Python finns funktioner för att generera slumparade värden på olika
-sätt.
+I modulen `random` som följer med Python finns funktioner för att generera
+slumparade värden på olika sätt.
 
 ### Slumpa fram ett heltal
 
