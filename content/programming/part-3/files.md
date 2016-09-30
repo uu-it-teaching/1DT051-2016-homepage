@@ -12,6 +12,8 @@ på [GitHub](https://github.com/).
 
 För att hämta de filer du behöver använder du [Git][git]. 
 
+[git]:https://sv.wikipedia.org/wiki/Git
+
 Öppna en terminal. 
 
 ```shell

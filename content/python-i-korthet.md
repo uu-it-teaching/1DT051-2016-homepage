@@ -109,6 +109,42 @@ Parenteser kan användas för att gruppera.
 6
 ```
 
+## Syntax
+
+Inom datavetenskapen menas med syntax de regler som bestämmer hur symbolerna i
+ett programmeringsspråk måste kombineras och struktureras för att vara ett
+giltigt program[^syntax].
+
+[^syntax]:https://en.wikipedia.org/wiki/Syntax_(programming_languages)
+
+## Syntaxfel (Syntax Error)	
+
+Syntaxfel (engelska: Syntax error) är inom datavetenskap ett felmeddelande som
+uppstår när ett program inte är skrivet enligt syntaxreglerna för programspråket
+i fråga[^syntax-error].
+
+[^syntax-error]:https://sv.wikipedia.org/wiki/Syntaxfel
+
+Ett exempel på giltig syntax i Python.
+
+``` python
+>>> 1 + 2 
+3
+>>>
+```
+
+Ett exempel på syntaxfel i Python.
+
+``` python
+>>> +1 2
+  File "<input>", line 1
+    +1 2
+       ^
+SyntaxError: invalid syntax
+>>>
+```
+ 
+
 ## ​Kommentarer
 
 Med hjälp av tecknet `#` kan kommentarer läggas till i Python-koden, dvs text
@@ -242,6 +278,20 @@ NameError: name 'b' is not defined
 >>>
 ```
 
+Om namnet på variabeln inte följer [syntaxen](#syntax) för
+en [identifierare](#identifierare) uppstår
+ett [syntaxfel](#syntaxfel-syntax-error).
+
+``` python
+>>> a = 127     # Giltig sysntax
+>>> 33a = 127   # Ogiltig syntax
+  File "<input>", line 1
+    33a = 127
+      ^
+SyntaxError: invalid syntax
+>>>
+ ```
+
 ## Uttryck
 
 Ett uttryck är en **kombination** av **tal**, **operatorer**,
@@ -335,11 +385,22 @@ Allmänt gäller för `kvot = a / b` och `rest = a % b` att  `a = b*kvot + rest`
 
 ## Decimaltal (float)
 
-Decimal tal kallas även för flyttal och skrivs alltid med decimaldel, även om den är 0.
+Decimal tal kallas även för flyttal och skrivs alltid med decmial-punkt och
+vanligen även med decimaldel, även om den är 0. Om heltalsdelen utelämnas tolkas
+detta som om heltalsdelen är 0 (noll).
 
 ```python
->>> a = 3     # Heltal
->>> b = 3.0   # Decimaltal
+>>> 3     # Heltal
+3
+>>> 3.0   # Decimaltal
+3.0
+>>> 3.    # Decimaltal
+3.0
+>>> 0.5   # Decimaltal
+0.5
+>>> .5    # Decimaltal
+0.5
+>>>
 ```
 
 
@@ -1359,15 +1420,15 @@ Funktionen `max2` beräknar det största talet av `a` och `b`, detta tal skickas
 sedan vidare som parameter till `max2` tillsammans med `c` för att på så sätt
 beräkna det största talet av `a`, `b` och `c`.
 
-### ​ Parameter
+### Parameter
 
 En funktion kan ta noll eller flera namngivna parametrar. Dessa parametrar kan sedan användas som variabler i funktionen.
 
-###  Argument
+### Argument
 
 Vid funktionsanrop måste antalet argument överenstämma med antal parametrar. Vid anropet binds parametrarna till argumentens värden.
 
-###  Returvärde
+### Returvärde
 
 Om syftet med en funktion är att räkna ut något eller producera något returneras detta i slutet av funktionen med hjälp av **return**. Om en funktion returnerar ett värde går det att fånga upp och tilldela till en variabel eller använda som argument direkt vid ytterligare funktionsanrop.
 
@@ -1393,8 +1454,19 @@ I Python-tolken kan vi definiera funktionen `double` så här:
 >>>
 ```
 
+Om namnet på funktionen inte följer [syntaxen](#syntax) för
+en [identifierare](#identifierare) uppstår
+ett [syntaxfel](#syntaxfel-syntax-error).
 
- 
+``` python
+>>> def ?double(n):
+  File "<input>", line 1
+    def ?double(n):
+        ^
+SyntaxError: invalid syntax
+>>>
+```
+
 Vi skall nu i detalj studera hur det går till att definiera funktionen `double` i
 Python.
 
@@ -1417,7 +1489,6 @@ funktionen skall vara, i detta fall resultatet av uttrycket `2*n`.
 11. När du åter trycker på retur-tangenten visar Python-tolken att definitionen
     av funktionen är klar genom att ...
 12. ... skriva ut en ny Python-prompt.
-
 
 ## Anrop av funktion
 

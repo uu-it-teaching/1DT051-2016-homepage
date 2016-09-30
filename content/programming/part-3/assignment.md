@@ -62,17 +62,21 @@ inte redan gjort det.
 ## Starta Python
 
 Innan du fortsätter behöver du starta en Python-tolk. Du kan göra detta genom att
-använda [Python Idle](/idle) genom att [starta en Python-tolk från Linux-terminalen](/python-i-korthet/#starta-en-python-tolk).
+använda [Python Idle](/idle) eller genom
+att
+[starta en Python-tolk från Linux-terminalen](/python-i-korthet/#starta-en-python-tolk).
+
 
 ## Färdiga funktioner i assignment.py 
 
 Öppna filen `assignment.py` i Python Idle eller i någon annan text-editor. I
 början av filen finns ett antal färdiga funktioner som du skall använda dig av.
 
-### randomPoint(w)
+### randomPoint(p1, p2)
 
-Denna funktion returnerar ett slumpmässigt Point-objekt i fönstret `w`. Kika på
-koden för denna funktion och försök förstå hur den fungerar.
+Denna funktion returnerar ett slumpmässigt Point-objekt inom den rektangel som
+har `p1` som övre vänstra hörn och `p2` som nedre högra hörn. Kika på
+koden för funktionen `randomPoint` och försök förstå hur den fungerar.
 
 Bekanta dig med denna funktion genom att testa den från Python-tolken. Börja med
 att importera följande.
@@ -82,28 +86,24 @@ att importera följande.
 >>> from assignment import randomPoint
 ```
 
-Skapa sedan ett grafikfönster.
-```python
->>> w = GraphWin("test", 100, 100)
-```
-
-Nu kan du testa funktionen randomPoint().
+Nu kan du testa funktionen `randomPoint`.
 
 ```python
->>> p1 = randomPoint(w)
->>> p1.getX()
-39
->>> p1.getY()
-53
+>>> p = randomPoint(Point(10,10), Point(90, 90))
+>>> p.getX()
+62
+>>> p.getY()
+80
+>>>
 ```
 
 Testa att skapa ytterligare en punkt för att se om den får andra värden på x och y. 
 
 ```python
->>> p2 = randomPoint(w)
->>> p2.getX()
+>>> p = randomPoint(Point(10,10), Point(90, 90))
+>>> p.getX()
 20
->>> p2.getY()
+>>> p.getY()
 42
 ```
 
@@ -112,19 +112,19 @@ slumpmässig punkt 10 gånger.
 
 ```python
 >>> for _ in range(10):
-...     p = randomPoint(w)
+...     p = randomPoint(Point(10,10), Point(90, 90))
 ...     print p.getX(), p.getY()
 ... 
 60 24
-94 29
+54 29
 88 27
-94 68
+44 68
 80 82
 83 52
 82 79
 16 17
 9 2
-100 55
+11 55
 >>> 
 ```
 

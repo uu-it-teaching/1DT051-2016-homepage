@@ -61,6 +61,14 @@ bör du förstå och kunna använda dig av följande koncept.
 Du skall kunna använda [Python Idle](/idle) eller någon annan texteditor för att skriva,
 spara, ändra och köra Python-program.
 
+## Arbete och redovisning i par om två studenter
+
+Arbete och redovisning sker i par om två studenter. Vilket par du tillhör
+framgår på flikarna **Del 3 (par - namn)** och **Del 3 (namn - par)** på denna
+sida med [par för del 2 och del 3][pairs]. 
+
+[pairs]:https://docs.google.com/spreadsheets/d/16sCWDDmYSWo8uxni8rnyzLQ0rGzK3LkN75B074qL1xI/pubhtml# 
+
 ## Workshop
 
 Under en 2*45 minuters frivillig men starkt rekommenderad workshop går vi igenom:

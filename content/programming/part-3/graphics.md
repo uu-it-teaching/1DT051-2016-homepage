@@ -17,7 +17,7 @@ inte redan gjort det.
 ## Starta Python
 
 Innan du fortsätter behöver du starta en Python-tolk. Du kan göra detta genom
-att använda [Python Idle](/idle) genom
+att använda [Python Idle](/idle) eller genom
 att
 [starta en Python-tolk från Linux-terminalen](/python-i-korthet/#starta-en-python-tolk).
 
@@ -357,7 +357,9 @@ För att skapa en rektangel skapar vi ett objekt från klassen `Rectangle` med
  hjälp av dess konstruktor. Konstruktorn tar två punkter (objekt av klassen
 `Point`) som parametrar där dessa punkter utgör två valfria hörn i rektangeln. 
 
+
 ```python
+>>> r = Rectangle(Point(25, 25), Point(75, 75))
 >>> r.setFill("red")
 >>> r.setWidth(10)
 >>> r.draw(w4)
@@ -372,8 +374,14 @@ rektangel.
 ## Linje
 
 För att skapa en linje skapar vi ett objekt från klassen `Line` med hjälp av
-klassens konstruktor . Konstruktorn tar två punkter som parametrar där varje
-punkt utgör linjens ändpunkter. 
+klassens konstruktor. Konstruktorn tar två punkter som parametrar som utgör
+linjens ändpunkter. 
+
+Om vi vill rita en linje från centrum på den röda
+kvadraten till centrum på den blå cirkeln kan vi använda metoden `getCenter()` på
+start- och slutpunkt. 
+dessa objekt för att få centrum-punkterna på respektive objekt som ett objekt av klassen
+Point. 
 
 ```python
 l = Line(r.getCenter(), c.getCenter())
@@ -454,9 +462,13 @@ tryck sedan på pil-upp-tangentet:
 Metoden `getKey()` väntar på att du trycker på en tangent och returnerar sedan
 en sträng som beskriver vilken tangent du tryckt på.
 
-`Notera:` Om du börjat skriva in text i en `Entry`-ruta och inte läst ut texten
+{{< warning title="getText() och getkey()" >}}
+
+Om du börjat skriva in text i en `Entry`-ruta och inte läst ut texten
 med `getText()` fungerar inte `getKey()` förens du läst ut texten med
 `getText()`.
+
+{{< /warning >}}
 
 ## Samtliga klasser i graphics.py
 
