@@ -78,6 +78,12 @@ Under en 2*45 minuters frivillig men starkt rekommenderad workshop går vi igeno
 - Vad är **sambandet** mellan **objekt** och **klass**?
 - Det faktum att **i Python är listor objekt**. 
 
+Under denna workshop kikar vi på
+följande [slides för del 3 - workshop][part-3-workshop-slides].
+
+
+[part-3-workshop-slides]:https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_3_workshop.pdf
+
 ## Handledning
 
 Till del 3 finns ett schemalagt tillfälle om **2x45 minuter** i datorsal med

@@ -78,6 +78,10 @@ kan användas för att konstruera datorer.
 - [Uvärdering och exekvering av Python steg för steg][part-2-workshop-step-by-step]
 
 
+### Del 3 - workshop
+
+- [Slides][part-3-workshop-slides] till [del 3 - workshop](../programming/part-3/#workshop).
+
   
 [sp]: https://studentportalen.uu.se/portal/portal/uusp/student/student-course?entityId=141825
 
@@ -92,3 +96,5 @@ kan användas för att konstruera datorer.
 [part-2-workshop-idle]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_2_workshop_Python_IDLE.pdf
 
 [part-2-workshop-step-by-step]: https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_2_workshop_evaluation_and_execution_step_by_step.pdf
+
+[part-3-workshop-slides]:https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_3_workshop.pdf

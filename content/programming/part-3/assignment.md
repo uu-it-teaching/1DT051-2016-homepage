@@ -18,12 +18,19 @@ bör du förstå och kunna använda dig av följande koncept.
 * Slingor
   ([while](/python-i-korthet/#while), [for-in](/python-i-korthet/#for-in))
   
-Du skall kunna använda [Python Idle](/idle) eller någon annan texteditor för att skriva,
-spara, ändra och köra Python-program.
+Innan du börjar arbeta med del 3 - uppgifter bör du även: 
 
-Du bör ha gjort
+- kunna använda [Python Idle](/idle) eller någon annan texteditor för att skriva,
+spara, ändra och köra Python-program
+
+- ha gjort
 övningarna [introduktion till begreppen klass och objekt](../objects)
-och [introduktion till grafik i Python](../graphics) innan du fortsätter.
+och [introduktion till grafik i Python](../graphics)
+
+- kikat på [slides från del 3 - workshop][part-3-workshop-slides] som innehåller 
+en kortfattad introduktion till begreppen objekt och klass.
+
+[part-3-workshop-slides]:https://github.com/uu-it-teaching/1DT051-2016/raw/master/pdf/1DT051_2016_programming_part_3_workshop.pdf
 
 ## Syfte
 
